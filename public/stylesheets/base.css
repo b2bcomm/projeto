@@ -52,16 +52,13 @@ header{
 
       .img_site_seguro{
         height:79px; 
-        width:170px;
+        width:174px;
       }
       .img_midia_social {
           height: 100px; 
           width: 100px
       }
       
-      .txt_end{
-          text-align: center;
-      }
 
 
       .div_principal_foot {
@@ -72,3 +69,10 @@ header{
         margin-left: 0px; 
         margin-top: 0px;
     }
+
+
+/************** FINAL end **************/
+
+    .txt_end{
+      text-align: center;
+  }
