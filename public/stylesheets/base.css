@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding:0;
+    border:0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/************** CABEÇARIO header **************/
+
+header{
+    position:absolute;
+    top:0;
+    left:0;
+     background-color: aquamarine;
+}
+
+/************** RODAPE footer **************/
+
+
+     .flex {
+        display: flex;
+      }
+      
+      .flex-wrap {
+        flex-wrap: wrap;
+      }
+      
+      .flex-item-1 {
+        flex: 1;
+      }
+      
+      .item {
+        margin: 5px;
+        text-align: left;
+        font-size: 1.5em;
+      
+          /* font-family: Verdana; font-size: 26px;
+       */
+      }
+      
+      .container {
+        max-width: 400px;
+        margin: 0 auto;
+        border: 1px solid #ccc;
+      }
+      
+      .img_logo {
+          height: 76px; width: 305px
+      }
+      
+
+      .img_site_seguro{
+        height:79px; 
+        width:170px;
+      }
+      .img_midia_social {
+          height: 100px; 
+          width: 100px
+      }
+      
+      .txt_end{
+          text-align: center;
+      }
+
+
+      .div_principal_foot {
+        display: flex;
+        border-style: 0; 
+        background-color: #C0C0C0; 
+        height: 250px; 
+        margin-left: 0px; 
+        margin-top: 0px;
+    }
