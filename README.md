@@ -2,7 +2,7 @@
 
 05/04 usando idicação da aula para iniciar o projetos
 * npm install express-generator --g  (utilizando os pradroes mvc)
-* express myApp --ejs ( substituindo o html para ejs utilizando comandos e usos de apie java script)
+* express myApp --ejs ( substituindo o html para ejs html vira dinamica utilizando  e usos de api e  comandos java script)
 
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
