@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+*{
+    margin: 0;
+    padding:0;
+    border:0;
+    box-sizing: border-box;
+    font-family: Roboto, Verdana, sans-serif;
+}
+
+/************** CABEÇARIO header **************/
+
+.area_header{
+  background-color: rgba(71,133,195,1);
+  height: 80px;
+  width: 100%;
+  display: flex;
+    align-items: center;
+  justify-content: center;
+}
+
+
+.imagem_logo{
+   width: 224px;
+   height: 56px;
+}
+
+
+.area_busca{
+
+  width: 605px;
+  height: 45px;
+  border-radius: 10px;
+  font-size: 22px;
+}
+
+.centralizar_div_header{
+  /* align-items: center;
+  justify-content: center; */
+  top:50px;
+}
+
+
+.botao_header{
+  color: white;
+  background-color: transparent;
+  font-size: 22px;
+  cursor: pointer;
+  text-decoration: none;
+  padding:10px 20px;
+  white-space: nowrap;
+}
+
+.botao_header:hover{
+  color:black;
+  background-color:  white;
+  border-radius: 6px;
+  height: 45px;
+
+}
+
+
+.botao_header_Selecionado{
+  color: black;
+  background-color: white;
+  font-size: 22px;
+  width: 160px;
+  height: 45px;
+  border-radius: 6px;
+}
+
+
+
+/************** RODAPE footer **************/
+
+
+     .flex {
+        display: flex;
+        
+      }
+      
+      .flex-wrap {
+        flex-wrap: wrap;
+      }
+      
+      .flex-item-1 {
+        flex: 1;
+      }
+      
+      .item {
+        margin: 5px;
+        text-align: left;
+        font-size: 1.5em;
+  
+          /* font-family: Verdana; font-size: 26px;
+       */
+      }
+
+      .item_head {
+        margin: 5px;
+        text-align: center;
+        font-size: 1.5em;
+  
+          /* font-family: Verdana; font-size: 26px;
+       */
+      }
+      
+      .container {
+        max-width: 400px;
+        margin: 0 auto;
+        border: 1px solid #ccc;
+      }
+      
+      .img_logo {
+          height: 76px; width: 305px
+      }
+      
+
+      .img_site_seguro{
+        height:79px; 
+        width:170px;
+      }
+      .img_midia_social {
+          height: 100px; 
+          width: 100px
+      }
+      
+      .div_principal_foot {
+        display: flex;
+        border-style: 0; 
+        background-color: #C0C0C0; 
+        height: 250px; 
+        margin-left: 0px; 
+        margin-top: 0px;
+    }
+
+    .texto_dos_menu_do_footer{
+       color: black;
+       text-decoration: none;
+    }
+    .texto_dos_menu_do_footer:hover{
+      color:   rgba(71,133,195,1);
+      text-decoration: double;
+    }
+
+/************** INFORMAÇÕES FINAIS END **************/
+    .txt_end{
+      text-align: center;
+  }
