@@ -1,24 +1,24 @@
 Projeto Integrador
 
-- Projeto com padroes mvc,  instalando o express generator 
+-  instalando o express generator e utilizando os padrões mvc
+
 * npm install express-generator --g  
 * express myApp --ejs ( substituindo o html para ejs utilizando comandos e usos de api e java script)
 
-- Criar repositório no github
+- Repositório no github:
 * https://github.com/b2bcomm/projeto
 
-
-- Criar o repositorio local e vinculá-lo ao repositório remoto
+- Repositorio local e vinculá-lo ao repositório remoto
 * c:\b2bcomm
 
-- Adicionar nodemon utilizando configuração npx para iniciar
+- nota que se for usar nodemon no windows usar npx antes de iniciar 
 
-
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 - o que precisar para roda o projeto ?
 
-1- executar o comando npm install para instalar as dependencias abaixo
+1- executar o comando npm install para instalar as dependencias:
+
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "ejs": "~2.6.1",
@@ -29,7 +29,7 @@ Projeto Integrador
   
 1- roda npm run dev no terminal 
 
-de default o navegado o servidor utilizar a porta 3000 
+de default ,  o servidor utilizar a porta 3000 
 http://localhost:3000/
 
 
