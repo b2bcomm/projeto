@@ -1,8 +1,8 @@
 Projeto Integrador
 
-- Projeto utiliazando os padrão mvc instalando  o express generator 
-* npm install express-generator --g  (utilizando os pradroes mvc)
-* express myApp --ejs ( substituindo o html para ejs utilizando comandos e usos de apie java script)
+- Projeto com padroes mvc,  instalando o express generator 
+* npm install express-generator --g  
+* express myApp --ejs ( substituindo o html para ejs utilizando comandos e usos de api e java script)
 
 - Criar repositório no github
 * https://github.com/b2bcomm/projeto
@@ -12,8 +12,6 @@ Projeto Integrador
 * c:\b2bcomm
 
 - Adicionar nodemon utilizando configuração npx para iniciar
-
-
 
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
