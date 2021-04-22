@@ -6,12 +6,12 @@ Projeto B2Bcomm - Orçamentos instantâneo / Segmento atual Papelaria e Armarinh
 
 - A forma de pagamento e o tipo entrega, fica a negaciação por parte do comprador e do fornecedor.
 
-- Utilizando web api dos fornecedores as informações é totalmente atualizadas a cada busca feita pelo comprador garantindo a existência do produto e os valores informado pela plataforma B2Bcomm.
+- Utilizando web api dos fornecedores, as informações é totalmente atualizadas a cada busca feita pelo comprador garantindo a existência do produto e os valores informado pela plataforma B2Bcomm.
 
-"B2Bcomm faz a união entre empresas que precisa fazer orçamento e empresas que vende a melhor preço do segmento"
+"B2Bcomm faz a união entre empresas que precisa fazer orçamento & empresas que vende a melhor preço do segmento"
 
 +++++++++++++++++++++PARA INICIAR O PROJETO++++++++++++++++++++++++++++++++
-
+S
 Abrir o Terminal na pasta do projeto e executar:
 
 1- Digitar o comando:  npm install
