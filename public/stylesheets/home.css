@@ -1,168 +1,168 @@
 main{
-    display: flex;
+  display: flex;
 
-    flex-direction: column;
+  flex-direction: column;
 }
 
 /* Banners full */
-  .banner-full {
-    justify-content: flex-start;
-    padding-top: 20px;
-    box-sizing: border-box;
-    width: 100%;
-    overflow: hidden;
-  }
+.banner-full {
+  justify-content: flex-start;
+  padding-top: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+}
 
 .banner-full img{
-    display: flex;
-    width: auto;
+  display: flex;
+  width: auto;
 }
 
 
 
 .janela{
-    display: flex;
-    width: 100%;
-    justify-content: flex-start;
-    list-style: none;
-    overflow-x: hidden;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    counter-reset: item;
-    scroll-snap-type: x mandatory;
-  }
-  .janela lo, li{
-    display: flex;
-    width: 100%;
-    height: auto;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  list-style: none;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  counter-reset: item;
+  scroll-snap-type: x mandatory;
+}
+.janela lo, li{
+  display: flex;
+  width: 100%;
+  height: auto;
 }
 
 .bloco-banner{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  
 }
 
 .scroll-banners {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
 
 .lista-bolinhas,
 .bolinha-scroll {
-  display: flex;
-  margin: 10px;
+display: flex;
+margin: 10px;
 }
 
 .menu-botao {
-  display: flex;
-  justify-content: center;
-  width: 20px;
-  height: 20px;
-  background-color: rgb(44, 143, 182);
-  border: 0.25rem solid transparent;
-  border-radius: 50%;
-  font-size: 0;
-  transition: transform 0.1s;
+display: flex;
+justify-content: center;
+width: 20px;
+height: 20px;
+background-color: rgb(44, 143, 182);
+border: 0.25rem solid transparent;
+border-radius: 50%;
+font-size: 0;
+transition: transform 0.1s;
 }
 
 .carousel::before, .carousel::after, .carrossel-prox, .carrossel-prev {
-  position: absolute;
-  top: 0;
-  margin-top: 37.5%;
-  width: 4rem;
-  height: 4rem;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  font-size: 0;
-  outline: 0;
+position: absolute;
+top: 0;
+margin-top: 37.5%;
+width: 4rem;
+height: 4rem;
+transform: translateY(-50%);
+border-radius: 50%;
+font-size: 0;
+outline: 0;
 }
 /* Banner Sub */
 .banner-sub{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .banner-sub img{
-    width: 80%;
-    height: 150px;
+  width: 80%;
+  height: 150px;
 }
 
 /*Produtos*/
 
 .cat-pai{
-    display: flex;
-    margin: 20px;
-    flex-direction: column;
+  display: flex;
+  margin: 20px;
+  flex-direction: column;
 }
 .cat-produtos {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 3rem;
-    padding-bottom: 2rem;
-    justify-content: center;
-    border-bottom: 1px solid rgb(201, 201, 201);
-    border-radius: 8px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  justify-content: center;
+  border-bottom: 1px solid rgb(201, 201, 201);
+  border-radius: 8px;
 
-  }
+}
 .produtos{
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 200px;
-    margin-right: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 200px;
+  margin-right: 20px;
 }
 
 .foto-produto{
-      width: 100%;
-      border: 1px solid rgb(199, 199, 199);
-      border-radius: 8px;
-      position: relative;
-      margin-right: 10px;
-      justify-content: center;
-      align-items: center;
-  }
-  .foto-produto:hover{
-      opacity: 80%;
-      transition: 0.3s;
-  }
-  .prod-cta{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #2689d4;
-      color: white;
-      width: 100%;
-      height: 40px;
-  }
-  .prod-cta:hover{
-    transition: 0.8s;
-    color: rgb(255, 255, 255);
-    background-color: rgb(1, 53, 102);
-    box-shadow: 0 0 1px rgb(0 0 0 / 0%);
-  }
-
-.prod-nome{
-      display: flex;
+    width: 100%;
+    border: 1px solid rgb(199, 199, 199);
+    border-radius: 8px;
+    position: relative;
+    margin-right: 10px;
     justify-content: center;
     align-items: center;
-  }
+}
+.foto-produto:hover{
+    opacity: 80%;
+    transition: 0.3s;
+}
+.prod-cta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2689d4;
+    color: white;
+    width: 100%;
+    height: 40px;
+}
+.prod-cta:hover{
+  transition: 0.8s;
+  color: rgb(255, 255, 255);
+  background-color: rgb(1, 53, 102);
+  box-shadow: 0 0 1px rgb(0 0 0 / 0%);
+}
 
-  .text_menu_produtos{
-    margin-left: 110px;
-    font-size: 20;
-  }
+.prod-nome{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text_menu_produtos{
+  margin-left: 110px;
+  font-size: 20;
+}
 
 
-/************** COMECANDO - ELTON  **************/
+/**************  **************/
 .contedudo_area{
   background-color: #DDDDDD;
 

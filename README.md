@@ -77,3 +77,15 @@ utilizando ejs - template engine que permite criar uma estrutura dinamica
 e  o servidor nodemon fica ativo e atualizar sozinho conforme alteração
 npm install express-generator -g
 express myaap --ejs ( serviço de exibição )
+
+
+-----------------------------------------------------------------------
+
+Organizando e animado elementos
+
+29 de março
+
+Position -  position: fixed;  no header 
+Z-index - z-index: 2; no header 
+Transições
+Animações
