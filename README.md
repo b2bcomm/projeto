@@ -1,6 +1,6 @@
 Projeto B2Bcomm - Orçamentos instantâneo / Segmento atual Papelaria e Armarinho com objetivo de expandir para outros segmentos.
 
-- Cadastro de empresa quer anunciar seus produtos.
+- Cadastro de empresa para anunciar seus produtos.
 
 - Cadastro de empresa que quer comprar mas precisa fazer orçamentos, cenário comum em qualquer empresa fazer 3 orçamento antes de fechar a compra e a nossa plataforma B2Bcomm oferece isso de forma rápida, o comprador faz a busca do produto e consegui visualizar os preços de todos os fornecedores cadastrados ajudando a comparar os preços e possibilitando a criar orçamento. É possível criar uma lista de meus orçamento para facilitar a negociação com o fornecedor.
 
