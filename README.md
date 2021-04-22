@@ -11,7 +11,7 @@ Projeto B2Bcomm - Orçamentos instantâneo / Segmento atual Papelaria e Armarinh
 "B2Bcomm faz a união entre empresas que precisa fazer orçamento & empresas que vende a melhor preço do segmento"
 
 +++++++++++++++++++++PARA INICIAR O PROJETO++++++++++++++++++++++++++++++++
-S
+
 Abrir o Terminal na pasta do projeto e executar:
 
 1- Digitar o comando:  npm install
