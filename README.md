@@ -1,4 +1,4 @@
-Projeto B2Bcomm - Orçamentos instantâneo / Segmento atual Papelaria e Armarinho com objetivo de expandir o segmento.
+Projeto B2Bcomm - Orçamentos instantâneo / Segmento atual Papelaria e Armarinho com objetivo de expandir para outros segmentos.
 
 - cadastro de empresa quer anunciar seus produtos.
 
