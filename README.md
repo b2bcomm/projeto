@@ -1,14 +1,14 @@
 Projeto B2Bcomm - Orçamentos instantâneo / Segmento atual Papelaria e Armarinho com objetivo de expandir para outros segmentos.
 
-- cadastro de empresa quer anunciar seus produtos.
+- Cadastro de empresa quer anunciar seus produtos.
 
-- cadastro de empresa que quer comprar mas precisar fazer orçamentos, cenario comum em qualquer empresa fazer 3 orçamento antes de fechar a compra e a nossa plataforma B2Bcomm oferece isso de forma rapida, o comprador faz a busca do produto e conseguir visualizar os preços de todos os fornecedores cadastrados ajudando a comparar os preços e possibilitando a criar orçamento. E possivel criar uma lista de meus orçamento para facilitar a negociaçao com o fornecedor.
+- Cadastro de empresa que quer comprar mas precisa fazer orçamentos, cenário comum em qualquer empresa fazer 3 orçamento antes de fechar a compra e a nossa plataforma B2Bcomm oferece isso de forma rápida, o comprador faz a busca do produto e consegui visualizar os preços de todos os fornecedores cadastrados ajudando a comparar os preços e possibilitando a criar orçamento. E possível criar uma lista de meus orçamento para facilitar a negociação com o fornecedor.
 
-- a forma de pagamento e tipo entrega fica a parte do comprador e fornecedor
+- A forma de pagamento e o tipo entrega, fica a negaciação por parte do comprador e do fornecedor.
 
-- utilizando web api dos fornecendos as informações e totalmente atualizadas a cada busca feita pelo comprador garantido a existencia do produto e os valores informado pela plataforma B2Bcomm
+- Utilizando web api dos fornecedores as informações é totalmente atualizadas a cada busca feita pelo comprador garantindo a existência do produto e os valores informado pela plataforma B2Bcomm.
 
-"B2B faz a união entre empresas que precisa fazer orçamento e empresas que vender a melhor preço do segmento"
+"B2Bcomm faz a união entre empresas que precisa fazer orçamento e empresas que vende a melhor preço do segmento"
 
 +++++++++++++++++++++PARA INICIAR O PROJETO++++++++++++++++++++++++++++++++
 
