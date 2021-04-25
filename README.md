@@ -28,8 +28,8 @@ Abrir o Terminal na pasta do projeto e executar:
   
 2-  Digitar o comando: npm run dev
 
-O servidor (nodemon) vai usar a porta 3000 
-http://localhost:3000/
+O servidor (nodemon) vai roda na porta 8080 
+http://localhost:8080/
 
 
 ************************************************************************************************************
@@ -89,3 +89,17 @@ Position -  position: fixed;  no header
 Z-index - z-index: 2; no header 
 Transições
 Animações
+
+
+---------------------------------------------------------------------------
+
+Projeto Integrador / Revisão / Práticas
+
+07 de abril
+
+Rotas Parametrizadas
+
+Porta de Web 
+
+Mudança de porta padrao 3000 para uma especifica 8080 
+app.listen(8080, ()=>console.log('Servidor Rodando na porta 8080'))
