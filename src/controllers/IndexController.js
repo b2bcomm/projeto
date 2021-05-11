@@ -1,4 +1,8 @@
+// var destaque = require('../models/produtoDestaque')
+
 const controlador = {
+
+   
     index: (req, res)=> {
         const destaque = [
              {

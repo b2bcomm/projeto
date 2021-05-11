@@ -1,13 +1,8 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
 const IndexHome = require('../controllers/IndexController')
 router.get('/', IndexHome.index) 
-
-
-
-
-
 
 
 router.get('/quem_somos', function(req, res, next) {
