@@ -14,8 +14,10 @@ Projeto B2Bcomm - Orçamentos instantâneo / Segmento atual Papelaria e Armarinh
 
 Abrir o Terminal na pasta do projeto e executar:
 
-1- Digitar o comando:  npm install
+1- Digitar o comando: 
  
+ $ npm install
+
    voce vai instalar as dependências:
 
     "cookie-parser": "~1.4.4",
@@ -26,7 +28,9 @@ Abrir o Terminal na pasta do projeto e executar:
     "morgan": "~1.9.1",
     "nodemon": "^2.0.7"
   
-2-  Digitar o comando: npm run dev
+2-  Digitar o comando:
+
+$ npm run dev
 
 O servidor (nodemon) vai roda na porta 8080 
 http://localhost:8080/
@@ -103,3 +107,11 @@ Porta de Web
 
 Mudança de porta padrao 3000 para uma especifica 8080 
 app.listen(8080, ()=>console.log('Servidor Rodando na porta 8080'))
+
+---------------------------------------------------------------------------
+
+Nova Organização na estrutura do projeto 
+
+11 de Maio
+
+Conforme a orientação do professor Leandro organizar as paginas por pasta. Facilitando a manutenção da tela
