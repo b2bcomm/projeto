@@ -1,128 +1,101 @@
 <!DOCTYPE html>
 <html>
-      <!-- HEAD DO SITE -->
-      <%- include('partials/head') %>
-      <!-- FIM - HEAD DO SITE -->
-      <link rel='stylesheet' href='/stylesheets/home.css' />
+        <!-- HEAD DO SITE -->
+        <%- include('partials/head') %>
+        <!-- FIM - HEAD DO SITE -->
+
+        <link rel='stylesheet' href='/stylesheets/home.css' />
 
   <body>
-    <!-- HEADER DO SITE -->
-    <%- include('partials/header') %>
-    <!-- FIM - HEADER DO SITE -->
+        <!-- HEADER DO SITE -->
+        <%- include('partials/header') %>
+        <!-- FIM - HEADER DO SITE -->
+
+        <!-- CATEGORIA DO SITE -->
+        <%- include('partials/categoria') %>
+        <!-- FIM - CATEGORIA DO SITE -->
+    
+        <!-- CARROSSEL DO SITE -->
+        <%- include('partials/carrossel') %>
+        <!-- FIM - CARROSSEL DO SITE -->
+
+        <div class="conteudo">
 
 
-    <div class="contedudo_area">
-        <br /> 
-            <a href="/login" class="texto_dos_menu_do_footer botao_classificador">Todas as Categorias</a>
-            <a href="/login" class="texto_dos_menu_do_footer botao_classificador">Brinquedos</a>
-            <a href="/login" class="texto_dos_menu_do_footer botao_classificador">Cadernos</a>
-            <a href="/login" class="texto_dos_menu_do_footer botao_classificador">Canetas, Lápis e Lapiseiras</a>
-            <a href="/login" class="texto_dos_menu_do_footer botao_classificador">Informática</a>
-            <a href="/login" class="texto_dos_menu_do_footer botao_classificador">Bolsas e Mochilas</a>
-  
-    </div>
+                <div class="spaco_entre_bloco">
+                </div>
 
-    <div class="conteudo">
+                
+                <div class="text_menu_prdutos">
+                    Itens mais buscados:
+                </div>
 
 
-        <div class="base_banner">
-            <img src="images/banner.png"  class="" />
-        </div>
-        
+                <div class="row_produtos">
+            
+                    <% masprocurado.forEach((item) => { %>
+                        <div class="produtos">
+                            <img src= <%= item.img %> class="foto-produto">   
+                            <div class="prod-nome"> <%= item.produto %></div>
+                            <button class="prod-cta" buttom href="#">Ver Produto</button>
+                    </div>
 
-        <div class="bane_segundario">
-        </div>
+                    <% })%>
 
-
-
-
-
-
-
-        <div class="spaco_entre_bloco">
-        </div>
-
-        
-        <div class="text_menu_prdutos">
-            Itens mais buscados:
-        </div>
+                </div>  
 
 
-        <div class="row_produtos">
-     
-            <% masprocurado.forEach((item) => { %>
-                <div class="produtos">
-                    <img src= <%= item.img %> class="foto-produto">   
-                    <div class="prod-nome"> <%= item.produto %></div>
-                    <button class="prod-cta" buttom href="#">Ver Produto</button>
-               </div>
+                <div class="spaco_entre_bloco">
+                </div>
 
-            <% })%>
-
-        </div>  
+                
+                <div class="text_menu_prdutos">
+                Produtos em destaque:
+                </div>
 
 
+                <div class="row_produtos">
+            
+                    <% destaque.forEach((item) => { %>
+                        <div class="produtos">
+                            <img src= <%= item.img %> class="foto-produto">   
+                            <div class="prod-nome"> <%= item.produto %></div>
+                            <button class="prod-cta" buttom href="#">Ver Produto</button>
+                    </div>
+
+                    <% })%>
+
+                </div>  
 
 
+                <div class="spaco_entre_bloco">
+                </div>
+
+                
+                <div class="text_menu_prdutos">
+                    Produto novos:
+                </div>
 
 
-        <div class="spaco_entre_bloco">
-        </div>
+                <div class="row_produtos">
+            
+                    <% novos.forEach((item) => { %>
+                        <div class="produtos">
+                            <img src= <%= item.img %> class="foto-produto">   
+                            <div class="prod-nome"> <%= item.produto %></div>
+                            <button class="prod-cta" buttom href="#">Ver Produto</button>
+                    </div>
 
-        
-        <div class="text_menu_prdutos">
-           Produtos em destaque:
-        </div>
+                    <% })%>
 
-
-        <div class="row_produtos">
-     
-            <% destaque.forEach((item) => { %>
-                <div class="produtos">
-                    <img src= <%= item.img %> class="foto-produto">   
-                    <div class="prod-nome"> <%= item.produto %></div>
-                    <button class="prod-cta" buttom href="#">Ver Produto</button>
-               </div>
-
-            <% })%>
-
-        </div>  
+                </div>  
 
 
-
-
-
-
-
-
-        <div class="spaco_entre_bloco">
+                <div class="spaco_entre_bloco">
+                </div>     
         </div>
 
-        
-        <div class="text_menu_prdutos">
-            Produto novos:
-        </div>
-
-
-        <div class="row_produtos">
-     
-            <% novos.forEach((item) => { %>
-                <div class="produtos">
-                    <img src= <%= item.img %> class="foto-produto">   
-                    <div class="prod-nome"> <%= item.produto %></div>
-                    <button class="prod-cta" buttom href="#">Ver Produto</button>
-               </div>
-
-            <% })%>
-
-        </div>  
-
-
-
-        <div class="spaco_entre_bloco">
-        </div>
-
-
+        <!-- FOOTER DO SITE -->
         <%- include('partials/footer')%>
         <!-- FIM - FOOTER DO SITE -->
         
@@ -131,6 +104,5 @@
         <!-- FIM - END DO SITE -->
  
   </body>
-   <!-- FOOTER DO SITE -->
 
 </html>
