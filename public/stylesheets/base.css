@@ -29,10 +29,17 @@
 
 .area_busca{
 
-  width: 605px;
+  width: 2500px;
   height: 45px;
   border-radius: 10px;
   font-size: 22px;
+
+  color: #5F5F5F;
+
+  border:1px solid;
+  border-radius: 6px;
+  border-color: #5F5F5F;
+
 }
 
 .centralizar_div_header{
@@ -40,7 +47,10 @@
   justify-content: center; */
   top:50px;
 }
-
+.imagem_car{
+  height: 40;
+  width: 40;
+}
 
 .botao_header{
   color: white;
@@ -50,6 +60,7 @@
   text-decoration: none;
   padding:10px 20px;
   white-space: nowrap;
+  margin-right: 20px;
 }
 
 .botao_header:hover{
@@ -57,21 +68,56 @@
   background-color:  white;
   border-radius: 6px;
   height: 45px;
+   border-color: #5F5F5F;
+   color: #5F5F5F;
+   border-width: 1px; 
+   border:1px solid;
+
 
 }
 
 
 .botao_header_Selecionado{
-  color: black;
+
   background-color: white;
   font-size: 22px;
   width: 160px;
   height: 45px;
+  color: #5F5F5F;
+  border-width: 4px; 
+  border:1px solid;
   border-radius: 6px;
+  border-color: #5F5F5F;
+}
+
+.conteudo{
+
+  width: 1290px;
+  height: auto;
+  background: transparent;
+  position: relative;
+  margin: 5px auto 0 auto;
+
+
 }
 
 
+.div_do_logo_heard{
+  width: 100%;
+}
 
+.div_dos_botos_heard{
+  width: 2700px;;
+   height: 100%;
+      text-align: right;
+      align-items: center;
+      justify-content: center;
+}
+
+/* input:focus {
+  background-color: mediumpurple;
+
+} */
 /************** RODAPE footer **************/
 
 
@@ -148,3 +194,4 @@
     .txt_end{
       text-align: center;
   }
+
