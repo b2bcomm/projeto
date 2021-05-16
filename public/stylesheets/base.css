@@ -61,18 +61,24 @@
   padding:10px 20px;
   white-space: nowrap;
   margin-right: 20px;
+  border-radius: 6px;
+  transition: background 0.5s;
+  height: 45px;
 }
 
 .botao_header:hover{
+
+  
+  transition: border 0.15s;
   color:black;
-  background-color:  white;
+  background:  white;
   border-radius: 6px;
   height: 45px;
    border-color: #5F5F5F;
    color: #5F5F5F;
    border-width: 1px; 
    border:1px solid;
-
+   height: 45px;
 
 }
 
@@ -89,6 +95,22 @@
   border-radius: 6px;
   border-color: #5F5F5F;
 }
+.botao_header_Selecionado:hover{
+
+  background-color: white; opacity: 0.8;;
+  font-size: 22px;
+  width: 160px;
+  height: 45px;
+  color: rgba(71,133,195,1);
+  border-width: 4px; 
+  border:1px solid;
+  border-radius: 6px;
+  border-color: midnightblue
+
+}
+
+
+
 
 .conteudo{
 
@@ -168,8 +190,8 @@
         width:170px;
       }
       .img_midia_social {
-          height: 100px; 
-          width: 100px
+          height: 80px; 
+          width: 80px
       }
       
       .div_principal_foot {
@@ -194,4 +216,5 @@
     .txt_end{
       text-align: center;
   }
+
 
