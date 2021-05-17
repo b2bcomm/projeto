@@ -4,35 +4,41 @@
            id: 1,
            produto: "CADERNO 01X1 CAPA DURA 2021 SPIDER-MAN GAME 80FLS.",
            img: "https://www.reval.net/imagem/produtos/p/086995.jpg",
+           class: "carousel-item active",
         },
    
         {
             id: 2,
             produto: "PAPEL SULFITE A4 CHAMEX 75G 10 PCTX500 FLS",
             img: "https://www.reval.net/imagem/produtos/p/080000.jpg",
+            class: "carousel-item",
         },
    
         {
             id: 3,
             produto: "KIT PROMOCIONAL CRISTAL AZUL C/50 L8P7",
             img: "https://www.reval.net/imagem/produtos/p/097720.jpg",
+            class: "carousel-item",
         },
        
         {
             id: 4,
             produto: "HOT WHEELS HOT WHEELS C/5 CARRINHOS SORT.",
             img: "https://www.reval.net/imagem/produtos/p/016624.jpg",
+            class: "carousel-item",
         },
    
         {
             id: 5,
             produto: "KIT PERIFERICOS TECLADO+MOUSE SEM FIO PRETO",
             img: "https://www.reval.net/imagem/produtos/p/069951.jpg",
+            class: "carousel-item",
         },
         {
             id: 6,
             produto: "ARQUIVO MORTO PAPELAO KRAFT 35X13,3X24,7CM. 240G.",
             img: "https://www.reval.net/imagem/produtos/p/050268.jpg",
+            class: "carousel-item",
         }
    
    
@@ -44,35 +50,41 @@
         id: 1,
           produto: "CADERNO 10X1 CAPA DURA ZIP 160FLS",
           img: "https://www.reval.net/imagem/produtos/p/094259.jpg",
+          class: "carousel-item active",
        },
    
        {
         id: 2,
         produto: "CANETA ESFEROGRAFICA BPS-GRIP-M 1.0 AZUL",
         img: "https://www.reval.net/imagem/produtos/p/089732.jpg",
+        class: "carousel-item",
        },
    
        {
         id: 3,
-        produto: "BLOCO PARA EDUCACAO ARTISTICA BASIC ART MILIMETRADO A3 50FLS",
+        produto: "BLOCO PARA EDUCACAO ARTISTICA ART MILIMETRADO",
         img: "https://www.reval.net/imagem/produtos/p/088098.jpg",
+        class: "carousel-item",
        },
       
        {
         id: 4,
         produto: "CADERNO INTELIGENTE MEDIO CARAMEL 80FLS.",
         img: "https://www.reval.net/imagem/produtos/p/088277.jpg",
+        class: "carousel-item",
        },
    
        {
         id: 5,
         produto: "CARGA CANETA ESFEROGRAFICA CROSS PRETO BL.C/01",
         img: "https://www.reval.net/imagem/produtos/p/090580.jpg",
+        class: "carousel-item",
        },
        {
         id: 6,
         produto: "PAPEL SULFITE A4 CHAMEQUINHO 40K 120GRS. BRANCO",
         img: "https://www.reval.net/imagem/produtos/p/088117.jpg",
+        class: "carousel-item",
        }
    
    
@@ -81,32 +93,44 @@
    
    const LIST_NOVOS = [
      {
+        id: 1,
         produto: "ALCOOL 70 GEL ANTISSEPTICO 70° 500ML",
         img: "https://www.reval.net/imagem/produtos/p/085610.jpg",
+        class: "carousel-item active",
      },
    
      {
-      produto: "CHINELO HAVAIANAS INFANTIL MINECRAFT KIDS 23/4 VERDE",
+      id: 2,
+      produto: "CHINELO HAVAIANAS INFANTIL MINECRAFT KIDS",
       img: "https://www.reval.net/imagem/produtos/p/082966.jpg",
+      class: "carousel-item",
      },
    
      {
-      produto: "BLOCO PARA EDUCACAO ARTISTICA BASIC ART MILIMETRADO A3 50FLS",
+        id: 3,
+      produto: "BLOCO PARA EDUCACAO ARTISTICA BASIC ART",
       img: "https://www.reval.net/imagem/produtos/p/088098.jpg",
+      class: "carousel-item",
      },
     
      {
-      produto: "BLOCO DE RECADO AUTOADESIVO CAPRICHO 70X70MM 100F.4CORES",
+        id: 4,
+      produto: "BLOCO DE RECADO AUTOADESIVO CAPRICHO",
       img: "https://www.reval.net/imagem/produtos/p/086703.jpg",
+      class: "carousel-item",
      },
    
      {
+        id: 5,
       produto: "JOGO DE CARTAS COLOR ADDICT NOW UNITED",
       img: "https://www.reval.net/imagem/produtos/p/087406.jpg",
+      class: "carousel-item",
      },
      {
-      produto: "HOT WHEELS HW BASICO SORTIDO- MASTER C/72",
+        id: 6,
+      produto: "HOT WHEELS HW BASICO SORTIDO- MASTER",
       img: "https://www.reval.net/imagem/produtos/p/030000.jpg",
+      class: "carousel-item",
      }
    
    

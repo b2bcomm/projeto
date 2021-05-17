@@ -8,6 +8,7 @@
   flex-wrap: wrap;
   max-width: 200px;
   margin-right: 20px;
+
 }
 
 .foto-produto{
@@ -18,10 +19,15 @@
     margin-right: 10px;
     justify-content: center;
     align-items: center;
+
+    background-color: gray;
+ 
 }
 .foto-produto:hover{
     opacity: 80%;
     transition: 0.3s;
+    /* cursor: pointer; */
+    
 }
 .prod-cta{
     display: flex;
@@ -218,11 +224,11 @@ transition: background 0.5s;
 .col-3 img{
    width: 100%; 
 }
-.small-container{
-   max-widthp: 1080px;
+.small-container_marcas{
+
    margin: auto;
-   padding-left: 35px;
-   padding-right: 35px;
+   /* padding-left: 35px;
+   padding-right: 35px; */
 }
 
 .col-4{
@@ -327,21 +333,21 @@ small{
     font-size: 16px;
 }
 /*******-----------Marcas/-------------*******/
-.brands{
+.brands_marcas{
     margin: 100px auto;
 }
 
-.col-5{
+.col-5_marcas{
     width: 160px;
 }
 
-.col-5 img{
+.col-5_marcas img{
     width: 100%;
     cursor: pointer;
     filter: grayscale(100%);
 }
 
-.col-5 img:hover{
+.col-5_marcas img:hover{
     filter:grayscale(0);
 
 }
@@ -432,10 +438,12 @@ ul{
 
 /*consulta de mídia para tamanho de tela inferior a 600 */
 @media only screen and(max-width: 600px){
-    .row{
+    .row_marca{
         text-align: center;
     }
     .col-2, .col-3, .col-4{
  flex-basis: 100%;
     }
 }
+
+

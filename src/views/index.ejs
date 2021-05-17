@@ -5,7 +5,7 @@
         <!-- FIM - HEAD DO SITE -->
 
         <link rel='stylesheet' href='/stylesheets/home.css' />
-
+ 
   <body>
 
  
@@ -17,10 +17,6 @@
         <%- include('partials/categoria') %>
         <!-- FIM - CATEGORIA DO SITE -->
       
-
-               <!-- CARROSSEL DO SITE -->
-               <%- include('partials/produtoMaisProcurado') %>
-               <!-- FIM - CARROSSEL DO SITE -->
 
         <div class="conteudo">
 
@@ -36,7 +32,16 @@
                 <h2 class= "title" >Produtos mais buscados</h2>
 
 
-                <div class="row_produtos">
+
+                
+               <!-- CARROSSEL DOS PRODUTOS MAIS BUSCADOS -->
+               <%- include('partials/produtoMaisProcurado') %>
+               <!-- FIM - CARROSSEL DOS PRODUTOS MAIS BUSCADOS -->
+
+
+
+
+                <!-- <div class="row_produtos">
             
                     <% masprocurado.forEach((item) => { %>
                         <div class="produtos">
@@ -47,16 +52,22 @@
 
                     <% })%>
 
-                </div>  
+                </div>   -->
 
 
                 <div class="spaco_entre_bloco">
                 </div>
 
                 <h2 class= "title" >Produtos em destaque</h2>
+                 
 
+                <!-- CARROSSEL DOS PRODUTOS MAIS BUSCADOS -->
+               <%- include('partials/produtosEmDestaque') %>
+               <!-- FIM - CARROSSEL DOS PRODUTOS MAIS BUSCADOS -->
 
-                <div class="row_produtos">
+                
+
+                <!-- <div class="row_produtos">
             
                     <% destaque.forEach((item) => { %>
                         <div class="produtos">
@@ -67,19 +78,19 @@
 
                     <% })%>
 
-                </div>  
+                </div>   -->
 
 
                 <div class="spaco_entre_bloco">
                 </div>
 
                 
-
+ 
                 <h2 class= "title" >Produtos novos</h2>
 
 
-
-                <div class="row_produtos">
+                <%- include('partials/produtosNovos') %>
+                <!-- <div class="row_produtos">
             
                     <% novos.forEach((item) => { %>
                         <div class="produtos">
@@ -90,7 +101,7 @@
 
                     <% })%>
 
-                </div>  
+                </div>   -->
 
 
                 <div class="spaco_entre_bloco">
@@ -154,41 +165,48 @@
                                             <img src="images/Usuaria2.png" alt="Erro na Imagem">
                                             <h3>Fernanda</h3>
                             </div>
-                <!----------------Usuário 3-------------------------->
-                <div class="col-3">
-                    <i class="fa fa-quote-left"></i>
-                    <p>
-                        Encontrei o melhor preço.
-                    </p>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <img src="images/bruno.png" alt="Erro na Imagem">
-                                <h3>Bruno</h3>
-                </div>
+                            <!----------------Usuário 3-------------------------->
+                            <div class="col-3">
+                                    <i class="fa fa-quote-left"></i>
+                                    <p>
+                                        Encontrei o melhor preço.
+                                    </p>
+                                    <div class="rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                    </div>
+                                    <img src="images/bruno.png" alt="Erro na Imagem">
+                                                <h3>Bruno</h3>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <!-----------------------Marcas----------------->
-                <div class="brands">
-                    <div class="small-container">
-                        <div class="row">
-                            <div class="col-5">
+                <div class="brands_marcas" style="text-align: center; display: flex; justify-items: center; justify-content: center;">
+              
+                      
+                          
+                          
+                          
+                                <div class="col-5_marcas" style="margin: 25px;">
                                     <img src="images/marca01 (1).png" alt="">
                                 </div>
-                                <div class="col-5">
+
+
+                                <div class="col-5_marcas"  style="margin: 25px;">
                                     <img src="images/marca02.png" alt="">
                                 </div>
-                                <div class="col-5">
+
+
+
+                                <div class="col-5_marcas"  style="margin: 25px;">
                                     <img src="images/marca03.png" alt="">
                                 </div>
-                        </div>
-                    </div>
-                </div>
+                     
+             
                 </div>
 
 
