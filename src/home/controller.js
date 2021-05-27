@@ -14,6 +14,10 @@ const controlador = {
     },
       
     
+    login: (req, res)=> {          
+      res.render('login', { title: 'Controle de Acesso' });
+    },
+  
 
 
 

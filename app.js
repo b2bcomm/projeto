@@ -6,7 +6,12 @@ const logger = require('morgan');
 
 // const indexRouter = require('./src/routes/index');
 const homeRouter = require('./src/home/routes');
+
 // const usersRouter = require('./src/routes/users');
+require('./src/cadastro_anunciantes/model');
+const todoRouter = require('./src/cadastro_anunciantes/routes')
+
+
 
 const app = express();
 
@@ -21,6 +26,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', homeRouter);
+app.use('/api/todo', todoRouter)
+
 // app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler

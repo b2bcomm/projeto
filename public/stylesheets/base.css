@@ -1,3 +1,4 @@
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css'); 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 *{
     margin: 0;
@@ -5,6 +6,7 @@
     border:0;
     box-sizing: border-box;
     font-family: Roboto, Verdana, sans-serif;
+
 }
 
 /************** CABEÇARIO header **************/
@@ -79,11 +81,23 @@
    border-width: 1px; 
    border:1px solid;
    height: 45px;
-
+   text-decoration: none;
 }
 
 
 .botao_header_Selecionado{
+
+
+  font-size: 22px;
+  cursor: pointer;
+  text-decoration: none;
+  padding:10px 20px;
+  white-space: nowrap;
+  margin-right: 20px;
+  border-radius: 6px;
+  transition: background 0.5s;
+  height: 45px;
+
 
   background-color: white;
   font-size: 22px;
@@ -96,7 +110,7 @@
   border-color: #5F5F5F;
 }
 .botao_header_Selecionado:hover{
-
+  text-decoration: none;
   background-color: white; opacity: 0.8;;
   font-size: 22px;
   width: 160px;
