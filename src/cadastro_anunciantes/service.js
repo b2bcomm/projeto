@@ -15,16 +15,10 @@ class Service {
   }
 
   save (todoToSave) {
-    // const { id_anunciante, cm_nome_empresa } = todoToSave
-    const {cm_nome_empresa } = todoToSave
-    // if (id_anunciante) {
-    //   const index = TodoModel.findIndex(anunciantes => Number(anunciantes.id_anunciante) === Number(id_anunciante))
-    //   TodoModel[index] = todoToSave
-    // } else {
-       create(cm_nome_empresa)
-    // }
 
-    // return todoToSave
+    const {cm_nome_empresa } = todoToSave
+   create(cm_nome_empresa)
+
   }
 
   remove (todoId) {
