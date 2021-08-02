@@ -1,0 +1,196 @@
+.alert_ok {
+  width: 100%;
+  padding: 20px;
+  background-color: #2ed049;
+  color: white;
+}
+
+.closebtn_ok {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn_ok:hover {
+  color: black;
+}
+
+.botaoConfirmar {
+  margin-bottom: 20px;
+  width: 100px;
+  height: 50px;
+  color: #ffffff;
+  background-color: lightgreen;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.botaoConfirmar:hover {
+  margin-bottom: 20px;
+  width: 100px;
+  height: 50px;
+  color: #ffffff;
+  background-color: rgb(57, 180, 57);
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+/*css global tabela*/
+.full_table_list {
+  width: 200px;
+  border-collapse: collapse;
+}
+
+/*colocando bordas nas linhas*/
+.full_table_list tr {
+  border: 1px black solid;
+}
+
+/*Definido cor das linhas pares*/
+.full_table_list tr:nth-child(even) {
+  background: #fff;
+}
+
+/*Definindo cor das Linhas impáres*/
+.full_table_list tr:nth-child(odd) {
+  background: #eee;
+}
+
+.div_junto_conteudo {
+  display: none;
+  vertical-align: middle;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.area_orcamento {
+  margin: 20px;
+  color: grey;
+}
+
+.area_tabela {
+  width: 100%;
+  font-size: smaller;
+  border-radius: 10px;
+}
+
+.tr_tabela {
+  background-color: rgba(71, 133, 195, 1);
+  color: white;
+  border-radius: 10px;
+}
+
+.th_tabela_heard {
+  border: 1px solid #c0c0c0;
+}
+
+.th_h2_centralizar {
+  text-align: center;
+}
+
+.modaldcss {
+  display: none;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.div_cadastro {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.div_interna {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.div_form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+}
+
+.area_btn_cadastrar_ou_login {
+  margin-top: 15px;
+  display: flex;
+  font-size: x-large;
+  flex-direction: row;
+  height: 90px;
+  width: 500px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.brn_cadastre_se {
+  border-color: #c0c0c0 #c0c0c0 #eee #c0c0c0;
+  background: #eee;
+  width: 100%;
+  vertical-align: middle;
+  border-top-left-radius: 20px;
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.btn_sou_cadastrado {
+  z-index: 1;
+  background: #ffffff;
+  margin-left: -1px;
+  border: 1px solid #c0c0c0;
+  width: 100%;
+  vertical-align: middle;
+  border-top-right-radius: 20px;
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.form_cadastre_se {
+  background: #eee;
+  width: 100%;
+  margin-bottom: 20px;
+  height: auto;
+  margin-top: -1px;
+  border: 1px solid #c0c0c0;
+}
+
+.area_msg {
+  margin-left: 25px;
+  font-size: x-large;
+  margin-top: 25px;
+}
+
+.resposta_msg {
+  width: 1230px;
+  display: none;
+}
+
+.fonte_FontAwesome {
+  font-family: FontAwesome;
+  font-size: 20px;
+}
+
+.id_orcamento {
+  display: block;
+}
+
+.div_area_cadasttro {
+  font-size: 18px;
+  margin-right: 25px;
+}
+
+.heard_tabels {
+  background-color: rgba(71, 133, 195, 1);
+  color: white;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <!-- HEAD DO SITE -->
+      <%- include('partials/head') %>
+      <!-- FIM - HEAD DO SITE -->
+
+      <!-- css DO SITE -->
+      <link rel='stylesheet' href='/stylesheets/login.css' />
+      <link rel='stylesheet' href='/stylesheets/orcamento_produtos.css' />
+      <!-- FIM - css DO SITE -->
+  </head>
+  <body >
+    <!-- HEADER DO SITE -->
+     <div class="area_header">
+     <div class="area_header conteudo">
+     <div class="div_do_logo_heard">
+     <a href=/"> <img class="imagem_logo" src="/images/logo-branca.png" alt=""></a>
+    </div>
+
+    <input  class="search-input" id='term' name="term" type="search" aria-label="Search" placeholder="Busque aqui por código de barras, nome e etc…" /> 
+    <a href="/login" type="buttom" class=" search-button" style="font-size: 27px;"  ><span style="font-family: FontAwesome;"> &#xF002; </span></a>
+
+    <div class="div_dos_botos_heard" >
+        <a href="/login" type="buttom" style="font-size: 20px;" class="botao_header"><span style="font-family: FontAwesome;">&#xf07a; </span> Meus Orçamentos</a>
+        <a href="/login" type="buttom" style="font-size: 20px;" class="botao_header"><span style="font-family: FontAwesome;">&#xf084; </span> Login </a>
+        <a href="/login" type="buttom" style="font-size: 20px;"  class="botao_header_Selecionado"><span style="font-family: FontAwesome;">&#xf02c; </span> Anunciar</a>
+   </div>
+    </div>
+    </div>
+
+    <!-- FIM - HEADER DO SITE -->
+    <div class="body-content">
+
+        
+    <div class="conteudo"> 
+      <div style="display: flex; flex-direction: row;">
+        <div style="height: 100%; width: 280px; vertical-align: top;"  class="jumbotron">
+          <a style="font-size: 22px; word-wrap:break-word" class="texto_dos_menu_do_footer botao_classificador">Filtro por Categoria</a> 
+          <a style="font-size: 15px; word-wrap:break-word" class="texto_dos_menu_do_footer botao_classificador">_________________________</a> <br /> <br /> 
+          <a id="T" style="font-size: 15px; word-wrap:break-word" class="texto_dos_menu_do_footer botao_classificador">Todas as Categorias</a> <br />  <br /> 
+          <a id="utilidade" style="font-size: 15px; word-wrap:break-word" class="texto_dos_menu_do_footer botao_classificador">Utilidades Domesticas</a> <br />  <br /> 
+          <a id="G" style="font-size: 15px; word-wrap:break-word" class="texto_dos_menu_do_footer botao_classificador">Cuidados Pessoais</a> <br />  <br /> 
+          <a id="E" style="font-size: 15px; word-wrap:break-word" class="texto_dos_menu_do_footer botao_classificador">Eletroeletronicos</a> <br />  <br /> 
+          <a id="I" style="font-size: 15px; word-wrap:break-word" class="texto_dos_menu_do_footer botao_classificador">Informatica</a> <br />  <br /> 
+          <a id="B" style="font-size: 15px; word-wrap:break-word" class="texto_dos_menu_do_footer botao_classificador">Kids</a> <br />  <br /> 
+          <a id="C" style="font-size: 15px; word-wrap:break-word" class="texto_dos_menu_do_footer botao_classificador">Puericultura</a> <br />  <br /> 
+          <a id="S" style="font-size: 15px; word-wrap:break-word" class="texto_dos_menu_do_footer botao_classificador">Papelaria e Escritorio</a> <br />  <br /> 
+          <a id="H" style="font-size: 15px; word-wrap:break-word" class="texto_dos_menu_do_footer botao_classificador">Hobby-Art</a> <br />  <br /> 
+          <a id="A" style="font-size: 15px; word-wrap:break-word" class="texto_dos_menu_do_footer botao_classificador">Coffee Break e Descartaveis</a> <br />  <br /> 
+          <a id="F" style="font-size: 15px; word-wrap:break-word" class="texto_dos_menu_do_footer botao_classificador">Festas</a> <br />  <br />  
+          <a style="font-size: 15px; word-wrap:break-word" class="texto_dos_menu_do_footer botao_classificador">_________________________</a> 
+        </div>
+
+    <div style="display: flex; flex-direction: column;">
+            
+      <div id='modal' style="vertical-align: middle; text-align: center; justify-content: center; background-image:url('/images/carregando.gif'); width: 800px; height: 100%;">
+      </div>
+            <div id='modal_tabela'>
+          <h1 style="margin-left: 40px;"><div id='nome_categoria'> <%= categoria %> </div></h1>
+          <div style="display: none;" id='ID_FILTRO'> <%= id %> </div>
+          <table class="" style="width:100%; font-size: 14px; height: auto; margin-left: 25px; ">
+            <thead>
+              <tr>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody style="width: 100%; height: 100%;"  class="row">
+              <tr class="col-md-3" > 
+                <td>  
+                <div style="border-radius: 10px; border-color: #F0EDED; background-color: #F0EDED; border-width: 0px; margin: 20px; " >
+                <div style="text-align: center; margin: 15px;">      
+                      <img class="imagem_logo" style="text-align: center; width: 200px; height: 200px; border-radius: 50%; margin-top: 15px;" src='DDD' alt="">
+                  </div>
+              <div style="text-align: center;"> 
+              <h3>EÇTP</h3>       
+              <h5>DDDDDDDDDDDDD</h5>
+              <h5>EEEEEEEE</h5>
+              </div>
+              <div style="text-align: center; margin-top: -30px;">
+                <a class="btn btn-primary" href="/orcamento/SSS"> <span style="margin-top: 0px; font-family: FontAwesome;">&#xF002; </span>Receber Orçamento</a>
+                </div> 
+                  </div>        
+                </td>    
+                  </tr>   
+            </tbody>
+          </table>
+          </div>
+        </div>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="/script/categoria/categoria.service.js"></script>
+        <script src="/script/categoria/categoriaTableRow.component.js"></script>
+        <script src="/script/categoria/app.js"></script>
+    </div>
+    </div>
+
+     </div>
+    <!-- FOOTER DO SITE -->
+    <%- include('partials/footer')%>
+    <!-- FIM - FOOTER DO SITE -->
+
+    <!-- END DO SITE -->
+    <%- include('partials/end')%>
+    <!-- FIM - END DO SITE -->
+
+  </body>
+
+</html>

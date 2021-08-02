@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- HEAD DO SITE -->
+    <%- include('partials/head') %>
+    <!-- FIM - HEAD DO SITE -->
+
+    <!-- HEAD DO SITE -->
+    <link rel='stylesheet' href='/stylesheets/login.css' />
+    <link rel='stylesheet' href='/stylesheets/orcamento.css' />
+    <!-- HEAD DO SITE -->
+  </head>
+  <body >
+    <!-- HEADER DO SITE -->
+    <%- include('partials/header') %>
+    <!-- FIM - HEADER DO SITE -->
+
+    <!-- CATEGORIA DO SITE -->
+    <%- include('partials/categoria') %>
+    <!-- FIM - CATEGORIA DO SITE -->
+
+    <div class="conteudo"> 
+    <div class="jumbotron">
+      <% produto_classificado_por_codigo.forEach((item) => { %>
+        <table>
+          <tr>
+            <td  style="vertical-align:top;"><div style="align-items: center; text-align: center;">
+            <img style="width: 400px; height: 400px; border-radius: 50%; margin-right: 50px;" src=<%= item.foto %> alt="">
+            </div></td>
+            <td style="vertical-align:top;"> <div style="font-size: 40px;"><%= item.descricao %> </div>
+            <h2><%= item.nome %> </h2>
+            <h2><%= item.marca %> </h2>       
+            <input id='codigo' name="codigo" class="ocultar" type="text" value=<%= item.codigo %>>
+            <br\>  <br\> 
+            <div style="font-size: 30px; margin-top: 30px;">     
+             Quantidade:
+            </div>
+            <div style="display: flex; flex-direction: row; flex-wrap: nowrap; align-content: stretch; justify-content: space-flex-start; align-items: baseline;">
+            <button style="height: 50px; font-size: 22px; border-bottom-right-radius: 0px; border-top-right-radius: 0px;" class="btn btn-number" type="button" id="btnMinus" data-type="minus" data-field="txtQtde1">-</button>
+            <input id='txtQtde1' style="height: 50px; width: 100px; font-size: 22px; border-radius: 0px;" type="number"  name="txtQtde1" class="form-control input-number text-center" aria-label="Quantia" value="1" min="1" style="border: none;" data-fv-field="txtQtde1">                     
+            <button style="height: 50px; font-size: 22px; border-bottom-left-radius: 0px; border-top-left-radius: 0px;" class="btn btn-number" type="button" id="btnPlus" data-type="plus" data-field="txtQtde1">+</button> 
+            <h2 style="margin-left: 10px;"><%= item.embalagem %> </h2>
+            </div>
+            <div>                                   
+            <button id='inclur_produto' style="height: 50px; font-size: 22px; width: 500px;"  class="btn btn-primary" ><span style="font-family: FontAwesome;">&#xf07a; </span> Incluir em Meus Orçamentos</button>      
+            </div>
+          </tr>
+      </table>
+      <div>
+        <h2>Descrição</h2>
+         <p class="lead"><%= item.infAdicionais %> </p>
+        <% })%>
+    </div>
+    </div>
+    </div>
+    <!-- FOOTER DO SITE -->
+    <%- include('partials/footer')%>
+    <!-- FIM - FOOTER DO SITE -->
+
+    <!-- END DO SITE -->
+    <%- include('partials/end')%>
+    <!-- FIM - END DO SITE -->
+
+    <!-- SCRIPT DO SITE -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/script/orcamento/orcamento.service.js"></script>
+    <script src="/script/orcamento/app.js"></script>
+    <!-- FIM - SCRIPT DO SITE -->
+
+  </body>
+
+</html>

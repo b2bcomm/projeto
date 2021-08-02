@@ -1,24 +1,15 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-
-const IndexHome = require('./controller')
-
-
-  router.get('/', IndexHome.index) 
-
-  router.get('/login', IndexHome.login) 
-
-
-// router.get('/login', function(req, res, next) {
-//     res.render('login', { title: 'Express' });
-//   });
-
-
-// router.get('/login', function(req, res, next) {
-//     res.render('login', { title: 'Express' });
-//   });
-
-  
-  
-
+const IndexHome = require("./controller");
+const IndexLogin = require("../login/controller");
+router.get("/", IndexHome.index);
+router.get("/login", IndexLogin.login);
+router.get("/cadastro", IndexLogin.cadastro);
+router.post("/cadastro", IndexLogin.cadastroUsuario);
+router.post("/login", IndexLogin.respostaAutenticacao);
+router.get("/orcamento/:todoId", IndexHome.indexorcamento);
+router.get("/categorias/:id", IndexHome.categorias);
+router.post("/meusorcamento", IndexHome.meusorcamentos);
+router.get("/meusorcamento/:codigo",IndexHome.remover_o_produto_meusorcamentos);
+router.get("/meusorcamento", IndexHome.Getmeusorcamentos);
 module.exports = router;

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- HEAD DO SITE -->
+    <%- include('partials/head') %>
+    <!-- FIM - HEAD DO SITE -->
+
+    <!-- CSS BASE + LOGIN  -->
+    <link rel="stylesheet" href="/stylesheets/login.css" />
+    <!--CSS BASE + LOGIN-->
+
+  </head>
+  </head>
+  <body>
+
+    <!-- HEADER DO SITE -->
+    <%- include('partials/header') %>
+    <!-- FIM - HEADER DO SITE -->
+
+    <div class="conteudo">
+      <div class="area_conteudo">
+        <div class="area_cadastro">
+          <div class="area_cadastro_interna" >
+            <a class="botoes_navegacao botao_navegacao_login" href="/login" ><br/>Login</a >
+            <a class="bloc-title-signin-signup-active botao_navegacao_cadastro" href="/cadastro" ><br />Cadastre-se</a>
+          </div>
+          <div class="div_formulario" >
+            <div class="seg_div_formulario" >
+              <% if (errorMessage!="") { %>
+              <div class="alert">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';" >&times;</span>
+                <strong>Erro!</strong><br /><span><%= errorMessage %></span>
+              </div>
+              <% } %>
+              <form action="/cadastro" method="POST">
+                <fieldset>
+                  <label for="nome">Nome:</label>
+                  <input
+                    name="nome"
+                    id="nome"
+                    class="borda_imput"
+                    type="text"
+                    placeholder=" &#xf007; Digitar o nome..."
+                    value=""
+                    tabindex="1"
+                    autocomplete="off"
+                  />
+                  <br />
+                  <br />
+                </fieldset>
+                <fieldset>
+                  <label for="email">E-mail:</label>
+                  <input
+                    name="email"
+                    id="email"
+                    class="borda_imput"
+                    type="text"
+                    placeholder=" &#xf0e0; Digitar o email..."
+                    value=""
+                    tabindex="2"
+                    autocomplete="off"
+                  />
+                  <br />
+                  <br />
+                </fieldset>
+                <fieldset>
+                  <label for="password">Senha:</label>
+                  <input
+                    name="password"
+                    id="password"
+                    class="borda_imput"
+                    type="password"
+                    placeholder=" &#xf13e; Digitar a senha..."
+                    value=""
+                    tabindex="3"
+                    autocomplete="off"
+                  />
+                  <br /><br />
+                </fieldset>
+                <button class="botao_confirmacao">Entrar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER DO SITE -->
+    <%- include('partials/footer')%>
+    <!-- FIM - FOOTER DO SITE -->
+
+    <!-- END DO SITE -->
+    <%- include('partials/end')%>
+    <!-- FIM - END DO SITE -->
+
+  </body>
+</html>

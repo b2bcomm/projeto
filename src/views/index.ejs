@@ -5,223 +5,131 @@
         <%- include('partials/head') %>
         <!-- FIM - HEAD DO SITE -->
 
+        <!-- HEAD CSS HOME DO SITE -->
         <link rel='stylesheet' href='/stylesheets/home.css' />
+        <!-- FIM - CSS HOME DO SITE -->
   </head>
   <body>
 
- 
         <!-- HEADER DO SITE -->
         <%- include('partials/header') %>
         <!-- FIM - HEADER DO SITE -->
-
+        
         <!-- CATEGORIA DO SITE -->
         <%- include('partials/categoria') %>
         <!-- FIM - CATEGORIA DO SITE -->
       
-
         <div class="conteudo">
-
-                <!-- CARROSSEL DO SITE -->
-                <%- include('partials/carrossel') %>
-                <!-- FIM - CARROSSEL DO SITE -->
-
-
-                         
-                <div class="spaco_entre_bloco">
-                </div>
-
-                <h2 class= "title" >Produtos mais buscados</h2>
-
-
-
-                
-               <!-- CARROSSEL DOS PRODUTOS MAIS BUSCADOS -->
-               <%- include('partials/produtoMaisProcurado') %>
-               <!-- FIM - CARROSSEL DOS PRODUTOS MAIS BUSCADOS -->
-
-
-
-
-                <!-- <div class="row_produtos">
-            
-                    <% masprocurado.forEach((item) => { %>
-                        <div class="produtos">
-                            <img src= <%= item.img %> class="foto-produto">   
-                            <div class="prod-nome"> <%= item.produto %></div>
-                            <button class="prod-cta" buttom href="#">Ver Produto</button>
-                    </div>
-
-                    <% })%>
-
-                </div>   -->
-
-
-                <div class="spaco_entre_bloco">
-                </div>
-
-                <h2 class= "title" >Produtos em destaque</h2>
-                 
-
-                <!-- CARROSSEL DOS PRODUTOS MAIS BUSCADOS -->
-               <%- include('partials/produtosEmDestaque') %>
-               <!-- FIM - CARROSSEL DOS PRODUTOS MAIS BUSCADOS -->
-
-                
-
-                <!-- <div class="row_produtos">
-            
-                    <% destaque.forEach((item) => { %>
-                        <div class="produtos">
-                            <img src= <%= item.img %> class="foto-produto">   
-                            <div class="prod-nome"> <%= item.produto %></div>
-                            <button class="prod-cta" buttom href="#">Ver Produto</button>
-                    </div>
-
-                    <% })%>
-
-                </div>   -->
-
-
-                <div class="spaco_entre_bloco">
-                </div>
-
-                
- 
-                <h2 class= "title" >Produtos novos</h2>
-
-
-                <%- include('partials/produtosNovos') %>
-                <!-- <div class="row_produtos">
-            
-                    <% novos.forEach((item) => { %>
-                        <div class="produtos">
-                            <img src= <%= item.img %> class="foto-produto">   
-                            <div class="prod-nome"> <%= item.produto %></div>
-                            <button class="prod-cta" buttom href="#">Ver Produto</button>
-                    </div>
-
-                    <% })%>
-
-                </div>   -->
-
-
-                <div class="spaco_entre_bloco">
-                </div>     
-
-
-                <!-------------------------Oferta-------------------->
-                <div class="offer">
-                        <div class="small-container">
-                            <div class="row">
-                                <div class="col-2">
-                                 <img src="images/produto_ofertas.png" alt="" class="offer-img">
-                                </div>
-                                <div class="col-2">
-                                    <h1>Exclusivo avaliado na B2B</h1>
-                                    <small>
-                                        Sensacionais produtos disponibilazados para compra.
-                                        <br/>      
-                                        <a href="" class="btn">Comprar</a>
-                                    </small>
-                       
-                                </div>
-
-                             
-                            </div>
-                        </div>
-                </div>
-               
-                <!----------------------------Depoimentos ------->
-                <div class="testimonial">
-                    <div class="small-container">
-                        <div class="row">
-                            <div class="col-3">
-                                <i class="fa fa-quote-left"></i>
-                                <p>
-                                    Os melhores produtos com os preços mais baixos.
-                                </p>
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                                            <img src="images/Usuaria.jpg" alt="Erro na Imagem">
-                                            <h3>Jessica</h3>
-                            </div>
-                            <!---------------Usuário 2 ---------------->
-                            <div class="col-3">
-                                <i class="fa fa-quote-left"></i>
-                                <p>
-                                    Utilizo na minha empresa, excelente ferramenta.
-                                </p>
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                                            <img src="images/Usuaria2.png" alt="Erro na Imagem">
-                                            <h3>Fernanda</h3>
-                            </div>
-                            <!----------------Usuário 3-------------------------->
-                            <div class="col-3">
-                                    <i class="fa fa-quote-left"></i>
-                                    <p>
-                                        Encontrei o melhor preço.
-                                    </p>
-                                    <div class="rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </div>
-                                    <img src="images/bruno.png" alt="Erro na Imagem">
-                                                <h3>Bruno</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-----------------------Marcas----------------->
-                <div class="brands_marcas" style="text-align: center; display: flex; justify-items: center; justify-content: center;">
-              
-                      
-                          
-                          
-                          
-                                <div class="col-5_marcas" style="margin: 25px;">
-                                    <img src="images/marca01 (1).png" alt="">
-                                </div>
-
-
-                                <div class="col-5_marcas"  style="margin: 25px;">
-                                    <img src="images/marca02.png" alt="">
-                                </div>
-
-
-
-                                <div class="col-5_marcas"  style="margin: 25px;">
-                                    <img src="images/marca03.png" alt="">
-                                </div>
-                     
-             
-                </div>
-
-
-
+        <!-- CARROSSEL DO SITE -->
+        <%- include('partials/carrossel') %>
+        <!-- FIM - CARROSSEL DO SITE -->
+        <div>
+        <img class="img_manual_site" src="/images/manuelb2b.png"><img\>
+        </div>
+                        
+        <div class="spaco_entre_bloco">
         </div>
 
+        <h2 class= "title" >Produtos mais buscados</h2>
+
+        <!-- CARROSSEL DOS PRODUTOS MAIS BUSCADOS -->
+        <%- include('partials/produtoMaisProcurado') %>
+        <!-- FIM - CARROSSEL DOS PRODUTOS MAIS BUSCADOS -->
+
+        <div class="spaco_entre_bloco">
+        </div>
+
+        <h2 class= "title" >Produtos em destaque</h2>
+                 
+        <!-- CARROSSEL DOS PRODUTOS MAIS BUSCADOS -->
+        <%- include('partials/produtosEmDestaque') %>
+        <!-- FIM - CARROSSEL DOS PRODUTOS MAIS BUSCADOS -->
+
+        <div class="spaco_entre_bloco">
+        </div>
+ 
+        <h2 class= "title" >Produtos novos</h2>
+
+        <%- include('partials/produtosNovos') %>
+ 
+        <h2 class= "depoimento title" >Depoimentos</h2>
+
+        <div class="testimonial margin_area_depoimento">
+        <div class="small-container">
+        <div class="row">
+
+        <div class="col-3">
+        <i class="fa fa-quote-left"></i>
+        <p>Os melhores produtos com os preços mais baixos.</p>
+        <div class="rating">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        </div>
+        <img src="images/Usuaria.jpg" alt="Erro na Imagem">
+        <h3>Jessica</h3>
+        </div>
+          
+        <div class="col-3">
+        <i class="fa fa-quote-left"></i>
+        <p>Utilizo na minha empresa, excelente ferramenta.</p>
+        <div class="rating">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        </div>
+        <img src="images/Usuaria2.png" alt="Erro na Imagem">
+        <h3>Fernanda</h3>
+        </div>
+        
+        <div class="col-3">
+        <i class="fa fa-quote-left"></i>
+        <p>Encontrei o melhor preço.</p>
+        <div class="rating">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star-o"></i>
+        </div>
+        <img src="images/bruno.png" >
+        <h3>Bruno</h3>
+        </div>
+        </div>
+        </div>
+        </div>
+
+        <h2 class= "title" >Marcas</h2>
+        <div class="centralizar_marcas" >
+        <img src="/images/inst_forn.jpg"><img\>
+        </div>
+
+        <div class="brands_marcas centralizar_marcas">
+        <div class="col-5_marcas margem_marcas"">
+        <img src="images/marca01 (1).png" alt="">
+        </div>
+
+        <div class="col-5_marcas margem_marcas">
+        <img src="images/marca02.png" alt="">
+        </div>
+
+        <div class="col-5_marcas margem_marcas">
+        <img src="images/marca03.png" alt="">
+        </div>
+                      
+        </div>
+        </div>
+        
         <!-- FOOTER DO SITE -->
         <%- include('partials/footer')%>
         <!-- FIM - FOOTER DO SITE -->
-        
         <!-- END DO SITE -->
         <%- include('partials/end')%>
         <!-- FIM - END DO SITE -->
- 
-  </body>
+</body>
 
 </html>

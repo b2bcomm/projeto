@@ -10,7 +10,6 @@ const sequelize = new Sequelize(database, user, password, {
 })
 
 let isConnected = false
-
 const connect = async () => {
   if (isConnected) {
     return sequelize

@@ -15,21 +15,43 @@
                 </div> -->
 
 
+
                 <% destaque.forEach((item) => { %>
                     
        
                     <div class="<%= item.class %>"">
                       
 
-                   <div class="col-md-4">
-                        <img src= <%= item.img %> class="foto-produto">   
-                        <div class="prod-nome"> <%= item.produto %></div>
-                        <button class="prod-cta" buttom href="#">Fazer Orçamento</button>
+                   <div class="col-md-2">
+
+
+
+                    <div style="height: 220px; font-size: 10px; border-radius: 10px; border-color: #F0EDED; background-color: #F0EDED; border-width: 0px; margin: 20px; " >
+            
+                        <div style="text-align: center; margin: 15px;">      
+                              <img class="imagem_logo" style="text-align: center; width: 100px; height: 100px; border-radius: 50%; margin-top: 15px;" src=<%= item.img %> alt="">
+                           </div>
+                  
+                    
+                       <div style="text-align: center;"> 
+                         <h6><%= item.produto %></h6>
+                       </div>
+                        
+                        
+                       <div style=" font-size: 10px; text-align: center;">
+                        <a style=" font-size: 12px;" class="btn btn-primary" href="/orcamento/<%= item.codigo %>"> <span style="margin-top: 0px; font-family: FontAwesome;">&#xF002; </span>Receber Orçamento</a>
+                        </div> 
+                      </div>
+
+
                    </div>
        
                  </div>
 
                 <% })%>
+
+
+
 
                 
             
@@ -91,7 +113,7 @@
 })
 
 $('.carousel .carousel-item').each(function(){
-    var minPerSlide =3;
+    var minPerSlide =6;
     var next = $(this).next();
     if (!next.length) {
     next = $(this).siblings(':first');

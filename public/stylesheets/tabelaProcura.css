@@ -1,0 +1,69 @@
+/* -- Regras Gerais Início -- */
+* {
+  font-family: arial;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 18px;
+}
+/* -- Regras Gerais Fim -- */
+
+/* Área Header Início */
+header {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow: 0 0 8px 0 #676767;
+}
+
+.home-content {
+  margin-top: 60px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1024px;
+}
+
+.centered {
+  margin: 0 auto;
+}
+
+.max-width-800 {
+  width: 100%;
+  max-width: 800px;
+}
+
+tr.inactive {
+  background: #ff000057;
+}
+
+tr.active {
+  background: #54ff0057;
+}
+
+.btn.delete {
+  background: #bbb;
+  box-shadow: 1px 1px 1px 1px #ccc;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn.delete:hover {
+  background: #ddd;
+}
+
+.btn.delete:active {
+  background: #eee;
+}
+
+.hide {
+  display: none;
+}

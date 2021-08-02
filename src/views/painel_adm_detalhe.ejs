@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <!-- HEAD DO SITE -->
+      <%- include('partials/head') %>
+      <!-- FIM - HEAD DO SITE -->
+      <link rel='stylesheet' href='/stylesheets/painel.css' />
+      <link rel='stylesheet' href='/stylesheets/dataTables.b2bcommSelecao.css' />
+      <link rel='stylesheet' href='/stylesheets/dataTables.b2bcomm.css' />    
+      <script src="/script/jquery-3.5.1.js"></script>
+      <script src="/script/jquery.dataTables.min.js"></script>
+      <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.min.js"></script>
+      <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" /> 
+
+  </head>
+  <body>
+    <!-- HEADER DO SITE -->
+    <%- include('partials/headerPanelAdm') %>
+    <!-- FIM - HEADER DO SITE -->
+
+     <div class="">
+
+
+    <div style="display: flex; flex-direction: row; justify-content: left; ">
+                <div style="background-color: rgba(71, 133, 195, 1); color: white; width: 300px;">                  
+                    <div style="background:rgb(58, 114, 170); height: 50px ; font-size: xx-large; text-align: center;">
+                        <span style="font-family: FontAwesome;">&#xf0c9; </span> MENU
+                    </div>
+
+                    <a href="/quem_somos" class="texto_dos_menu" style="margin-bottom: 50px; color:white;  margin-left: 5px;"> <span style="font-family: FontAwesome;">&#xf2bc; </span>Cadastro das Empresas</a><br />
+                    <a href="/quem_somos" class="texto_dos_menu" style="margin-bottom: 50px; color:rgb(197, 197, 197);  margin-left: 5px;"> <span style="font-family: FontAwesome;">&#xf16b; </span>Cadastro dos Produtos</a><br />
+                    <a href="/quem_somos" class="texto_dos_menu" style="margin-bottom: 50px; color:rgb(197, 197, 197); margin-left: 5px;"> <span style="font-family: FontAwesome;">&#xf003; </span>Responder Fale conosco</a><br />
+                    <a href="/quem_somos" class="texto_dos_menu" style="margin-bottom: 50px; color:rgb(197, 197, 197); margin-left: 5px;"> <span style="font-family: FontAwesome;">&#xf03e; </span>Banners</a><br />
+
+                </div>
+                <div class="conteudo">
+                  <% ARRY_DADOSID.forEach((itemS) => { %>
+
+<!-- Modal -->
+<div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" style="color: white; background-color:rgba(71, 133, 195, 1);">
+        <h5 class="modal-title" id="exampleModalLabel"><span style="height: auto; font-family: FontAwesome; margin-left: 25px">&#xf235; </span>Atenção !!! Confirmar a exclusão dos dados da empresa:</h5>
+        <button type="button" class="close" style="color: white;" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <div>
+          <img style="width: 100px; height: 100px; border-radius: 50%;" src='<%= itemS.cm_url_foto %>' alt="">
+             <h1><%= itemS.cm_nome_empresa %></h1>
+             Representante:
+             <h3><%= itemS.cm_nome_representante %></h3>
+             Cnpj:
+             <h3><%= itemS.cm_cnpj %></h3>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" style="color: white;" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" style="color: white;" class="btn btn-danger">Excluir</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+                <div style="display:flex; flex-direction: column;width: 1000px; height: auto; box-shadow: 0 0 20px 0px rgb(0 0 0 / 50%); border-radius: 20px; margin: 50px;">               
+                        <div style="display: flex; background: #f4f4f4; border-top-right-radius: 20px; border-top-left-radius: 20px;">
+                            <div class=""  style=" text-decoration:none;  display:flex; font-size: x-large; flex-direction: row;  height: 90px; width: 300px;  border-top-right-radius: 20px; border-top-left-radius: 20px;" >          
+                            <a class="botoes_navegacao" style="text-decoration:none; white-space : nowrap; width: 1500px; vertical-align: middle;  border-top-left-radius: 20px; display: flex; justify-content: center; vertical-align:middle" href="/painel"> <br/> Cadastro das Empresas </a>
+                            <!--  -->
+                            </div>
+
+                            <div class=""  style=" text-decoration:none; display:flex; font-size: x-large; flex-direction: row;  height: 90px; width: 200px;  border-top-right-radius: 20px; border-top-left-radius: 20px;" >
+                            <a class="bloc-title-signin-signup-active"  style="text-decoration:none; white-space : nowrap; width: 100%; vertical-align: middle; display: flex; justify-content: center; vertical-align:middle" href="/cadastro"> <br/>Detalhes</a>                     
+                            </div>               
+                        </div>
+                <div class=""  style="background-color:white; width: 1000px; margin-bottom: 20px; height: auto" >
+        
+
+                    <div class="" style="margin-left: 25px; margin-right: 25px; font-size: x-large; margin-top: 25px;">
+                    <div style="display: flex; flex-direction: row; justify-content: center;">
+
+
+                  <div style="margin-left: 20px;">
+                    <button data-toggle="modal" data-target="#modalExemplo" class="botao_header_Selecionado"><span style="height: auto; font-family: FontAwesome; margin-left: 5px">&#xf235; </span>Excluir</button>
+                  </div>
+         
+                
+                    <form action="/painel" method="POST">
+                    <div style="margin-left: 20px;">
+                      <button class="botao_header_Selecionado"><span style="font-family: FontAwesome; margin-left: 5px; height: auto;">&#xf044; </span>Atualizar</button>
+                    </div>
+          
+
+                    
+                    </div>
+               
+            
+
+
+                </br>
+         
+
+
+
+              
+
+
+                  
+
+                 
+                <img style="width: 100px; height: 100px; border-radius: 50%;" src='<%= itemS.cm_url_foto %>' alt="">
+            
+
+                      <fieldset>
+                        <label for="id_participantes">Codigo:</label>
+                        <input name="id_participantes" id="id_participantes" class="" type="text"  placeholder="Digitar aqui..." value=<%= itemS.id_participantes %> tabindex="1" autocomplete="off"> <br> <br>  
+                      </fieldset>
+
+                      <fieldset>
+                        <label for="cm_nome_empresa">Empresa:</label>
+                        <input name="cm_nome_empresa" id="cm_nome_empresa" class="borda_imput" type="text" placeholder="Digitar aqui..." value='<%= itemS.cm_nome_empresa %>' tabindex="1" autocomplete="off"> <br> <br>  
+                      </fieldset>
+
+                      <fieldset>
+                        <label for="cm_cnpj">CNPJ:</label>
+                        <input name="cm_cnpj" id="cm_cnpj" class="borda_imput" type="text" placeholder="Digitar aqui..." value='<%= itemS.cm_cnpj %>' tabindex="1" autocomplete="off"> <br> <br>  
+                      </fieldset>
+
+                      <fieldset>
+                        <label for="cm_nome_representante">Representante:</label>
+                        <input name="cm_nome_representante" id="cm_nome_representante" class="borda_imput" type="text" placeholder="Digitar aqui..." value='<%= itemS.cm_nome_representante %>' tabindex="1" autocomplete="off"> <br> <br>  
+                      </fieldset>
+
+                      <fieldset>
+                        <label for="cm_email">E-mail:</label>
+                        <input name="cm_email" id="cm_email" class="borda_imput" type="text" placeholder="Digitar aqui..." value='<%= itemS.cm_email %>'> <br> <br>  
+                      </fieldset>
+
+
+                      <fieldset>
+                        <label for="cm_senha">Senha:</label>
+                        <input name="cm_senha" id="cm_senha" class="borda_imput" type="text" placeholder="Digitar aqui..." value='<%= itemS.cm_senha %>' > <br> <br>  
+                      </fieldset>
+
+                      <fieldset>
+                        <label for="createdAt">Data Cadastro:</label>
+                        <input name="createdAt" id="createdAt" class="borda_imput" type="datetime" value='<%= itemS.createdAt.toLocaleDateString("pt-BR") %>'> <br> <br>  
+                      </fieldset>
+
+                      <fieldset>
+                        <label for="updatedAt">Data Atualização:</label>
+                        <input name="updatedAt" id="updatedAt" class="borda_imput" type="text" placeholder="Digitar aqui..." value='<%= itemS.updatedAt %>' > <br> <br>  
+                      </fieldset>
+
+                      <fieldset>
+                        <label for="cm_url_foto">Caminho Foto:</label>
+                        <input name="cm_url_foto" id="cm_url_foto" class="borda_imput" type="text" placeholder="Digitar aqui..." value='<%= itemS.cm_url_foto %>' > <br> <br>  
+                      </fieldset>
+
+                  
+
+
+                    <% })%>
+    
+
+           
+                  </form>
+                 
+
+            
+                    </div>
+
+                    
+
+
+                </div>
+
+                </div>
+
+               </div>
+
+          </div>
+
+
+
+
+     </div>
+
+    <!-- FOOTER DO SITE -->
+    <%- include('partials/footer')%>
+    <!-- FIM - FOOTER DO SITE -->
+
+    <!-- END DO SITE -->
+    <%- include('partials/end')%>
+    <!-- FIM - END DO SITE -->
+
+  </body>
+
+</html>

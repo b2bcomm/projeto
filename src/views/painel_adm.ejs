@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <!-- HEAD DO SITE -->
+      <%- include('partials/head') %>
+      <!-- FIM - HEAD DO SITE -->
+      <link rel='stylesheet' href='/stylesheets/painel.css' />
+      <link rel='stylesheet' href='/stylesheets/dataTables.b2bcommSelecao.css' />
+      <link rel='stylesheet' href='/stylesheets/dataTables.b2bcomm.css' />
+      <script src="/script/jquery-3.5.1.js"></script>
+      <script src="/script/jquery.dataTables.min.js"></script>
+      <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.min.js"></script>
+      <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" /> 
+
+  </head>
+  <body>
+    <!-- HEADER DO SITE -->
+    <%- include('partials/headerPanelAdm') %>
+    <!-- FIM - HEADER DO SITE -->
+
+     <div class="">
+
+    <div style="display: flex; flex-direction: row; justify-content: left; ">
+                <div style="background-color: rgba(71, 133, 195, 1); color: white; width: 300px;">
+                    <div style="background:rgb(58, 114, 170); height: 50px ; font-size: xx-large; text-align: center;">
+                        <span style="font-family: FontAwesome;">&#xf0c9; </span> MENU
+                    </div>
+                    <a href="/quem_somos" class="texto_dos_menu" style="margin-bottom: 50px; color:white;  margin-left: 5px;"> <span style="font-family: FontAwesome;">&#xf2bc; </span>Cadastro das Empresas</a><br />
+                    <a href="/quem_somos" class="texto_dos_menu" style="margin-bottom: 50px; color:rgb(197, 197, 197);  margin-left: 5px;"> <span style="font-family: FontAwesome;">&#xf16b; </span>Cadastro dos Produtos</a><br />
+                    <a href="/quem_somos" class="texto_dos_menu" style="margin-bottom: 50px; color:rgb(197, 197, 197); margin-left: 5px;"> <span style="font-family: FontAwesome;">&#xf003; </span>Responder Fale conosco</a><br />
+                    <a href="/quem_somos" class="texto_dos_menu" style="margin-bottom: 50px; color:rgb(197, 197, 197); margin-left: 5px;"> <span style="font-family: FontAwesome;">&#xf03e; </span>Banners</a><br />
+                </div>
+
+                <div class="conteudo">
+                <div style="display:flex; flex-direction: column;width: 1000px; height: auto; box-shadow: 0 0 20px 0px rgb(0 0 0 / 50%); border-radius: 20px; margin: 50px;">
+                        <div style="display: flex; background: #f4f4f4; border-top-right-radius: 20px; border-top-left-radius: 20px;">
+                            <div class=""  style=" text-decoration:none;  display:flex; font-size: x-large; flex-direction: row;  height: 90px; width: 300px;  border-top-right-radius: 20px; border-top-left-radius: 20px;" >          
+                            <a class="bloc-title-signin-signup-active" style="text-decoration:none; white-space : nowrap; width: 1500px; vertical-align: middle;  border-top-left-radius: 20px; display: flex; justify-content: center; vertical-align:middle" href="/login"> <br/> Cadastro das Empresas </a>
+                            </div>
+                            <div class=""  style=" text-decoration:none; display:flex; font-size: x-large; flex-direction: row;  height: 90px; width: 200px;  border-top-right-radius: 20px; border-top-left-radius: 20px;" >
+                            <a class="botoes_navegacao"  style="text-decoration:none; white-space : nowrap; width: 100%; vertical-align: middle; display: flex; justify-content: center; vertical-align:middle" href="/painel/1"> <br/>Detalhes</a>                     
+                            </div>
+                        </div>
+                <div class=""  style="background-color:white; width: 1000px; margin-bottom: 20px; height: auto" >
+        
+                    <div class="" style="margin-left: 25px; margin-right: 25px; font-size: x-large; margin-top: 25px;">
+
+                    <div>
+
+                    </div>
+                                    
+                    
+        <script>
+        $(document).ready(function() {
+            $('#example').DataTable();
+        } );
+        </script>
+                    <table id="example" class="table table-striped" style="width:100%; font-size: smaller;" >
+                    <thead>
+                            <tr style="background-color: rgba(71, 133, 195, 1); color: white;">
+                            <th>Logomarca</th>
+                            <th>Empresa</th>
+                            <th>CNPJ</th>
+                            <th>Representante</th>
+                            <th>Cadastro</th>
+                            <th>Exibir</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                 <% ARRY_DADOS.forEach((item) => { %>
+
+                        <tr>
+                                    
+                            <td style="justify-content: center; text-align: center"> <img style="width: 50px; height: 50px; border-radius: 50%;" src='<%= item.cm_url_foto %>' alt=""></td>
+                            <td><%= item.cm_nome_empresa %></td>
+                            <td><%= item.cm_cnpj %></td>
+                            <td><%= item.cm_nome_representante %></td>
+                            <td><%= item.createdAt.toLocaleDateString("pt-BR") %></td>
+
+
+                            <td>
+                              
+                              <a href="/painel/<%= item.id_participantes %>" class="btn btn-primary"> <span style="font-family: FontAwesome;">&#xF002; </span>Detalhes</a></td> 
+
+                            <!-- <td>
+                              <form action="/painel" method="POST">
+                              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo"> Abrir modal</button>
+                              </form>
+                            </td> -->
+
+                            
+                        </tr>
+                
+                 <% })%>
+
+
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>Logomarca</th>
+                            <th>Empresa</th>
+                            <th>CNPJ</th>
+                            <th>Representante</th>
+                            <th>Cadastrado</th>
+                            <th>Exibir</th>
+                        </tr>
+                    </tfoot>
+                </table>
+
+
+
+
+
+
+
+
+
+            
+                    </div>
+
+                    
+
+        
+
+                </div>
+
+                </div>
+
+               </div>
+
+          </div>
+
+
+
+
+     </div>
+
+    <!-- FOOTER DO SITE -->
+    <%- include('partials/footer')%>
+    <!-- FIM - FOOTER DO SITE -->
+
+    <!-- END DO SITE -->
+    <%- include('partials/end')%>
+    <!-- FIM - END DO SITE -->
+
+  </body>
+
+</html>

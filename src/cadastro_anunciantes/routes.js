@@ -4,6 +4,7 @@ const controller = require('./controller')
 
 /* GET users listing. */
 router.get('/', controller.list)
+router.get('/:todoId', controller.listID)
 router.post('/', controller.create)
 router.patch('/:todoId', controller.edit)
 router.delete('/:todoId', controller.remove)

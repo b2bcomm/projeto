@@ -1,18 +1,300 @@
 <!DOCTYPE html>
 <html>
-      <!-- HEAD DO SITE -->
-      <%- include('partials/head') %>
-      <!-- FIM - HEAD DO SITE -->
+  <head>
+    <!-- HEAD DO SITE -->
+     <%- include('partials/head') %>
+    <!-- FIM - HEAD DO SITE -->
+
+     <!-- CSS DO SITE -->
+    <link rel='stylesheet' href='/stylesheets/login.css' />
+    <link rel='stylesheet' href='/stylesheets/meuOcamento.css' />
+    <!-- FIM - CSS DO SITE -->
+
+  </head>
   <body>
+
     <!-- HEADER DO SITE -->
     <%- include('partials/header') %>
     <!-- FIM - HEADER DO SITE -->
 
-    <!-- <h1><%= title %></h1> -->
-    <h1>Meus Orçamentos</h1> 
+     <!-- CATEGORIA DO SITE -->
+     <%- include('partials/categoria')%>
+     <!-- FIM - CATEGORIA DO SITE -->
 
-    <p>Relação de orçametos realizados na B2B comm.</p>
-   
+   <div class="conteudo">
+
+      <div id='confirmar' style="display: none; vertical-align: middle; text-align: center; justify-content: center; width:100%; height:100%;">
+        <img src="/images/confirmar.gif"></img>
+        <div style="margin: 20px; color: grey;">
+      <h1>Orçamento feito com sucesso!!!</h1>
+     <h3> Seu orçamento foi enviado por e-mail,</h3>
+     <h3>   Muito obrigado, por utilizar o PORTAL B2B, desejamos uma ótima negociação. </h3>
+    </div>
+     <button id="finalizar"  class="botaoConfirmar" >OK</button>
+      </div>
+        <div id='orcamento' style="display: block;">
+        <h1>Meus Orçamentos</h1> 
+        <p>Solicite orçamentos a diversos fornecedores em um só lugar.
+          Receba em seu e-mail todos os orçamentos e negocie diretamente com o fornecedor.</p>
+
+          <div>
+            <table id="example" class="full_table_list" style="width:100%; font-size: smaller; border-radius: 10px;" >
+              <thead  style="border-radius: 10px;">
+                  <tr style="background-color: rgba(71, 133, 195, 1); color: white; border-radius: 10px;">
+                      <th style="border: 1px solid #C0C0C0;"><h4 style="text-align: center; border-radius: 10px;"><span style="font-family: FontAwesome; font-size: 20px;">&#xf218; </span>Produto</h4></th>
+                      <th style="border: 1px solid #C0C0C0;"><h4 style="text-align: center;"><span style="font-family: FontAwesome; font-size: 20px;">&#xf0c0; </span>Anunciantes Localizado</h4></th>
+                      <th style="border: 1px solid #C0C0C0;"><h4 style="text-align: center; border-radius: 10px;"><span style="font-family: FontAwesome; font-size: 20px;">&#xf16b; </span>Quantidade</h4></th>
+                  </tr>
+              </thead>
+              <tbody  id='tabe'>
+                <tr>
+                  <td> </td>
+                  <td> </td>
+                  <td> </td>
+                </tr>
+              </tbody>
+              </table>
+          </div>
+
+          <div id='modald' style="display: none; text-align: center; justify-content: center; width:100%; height:100%;">
+            <img src="/images/carregando.gif"></img>
+          </div>
+  
+          <div id='cadastro' style="display: block; margin-bottom: 15px;">
+                <div style="display: flex; flex-direction: row; justify-content: center;">
+          <div style="display:flex; flex-direction: column;width: 100%; height: auto;">
+               
+          <div class=""  style="margin-top: 15px; display:flex; font-size: x-large; flex-direction: row;   height: 90px; width: 500px;  border-top-right-radius: 20px; border-top-left-radius: 20px;" >   
+                <a class="bloc-title-signin-signup-active" style="border-color: #C0C0C0 #C0C0C0 #EEE #C0C0C0; background: #EEE;  width: 100%; vertical-align: middle;  border-top-left-radius: 20px; display: flex; justify-content: center; vertical-align:middle" onclick="ocultar();" id="cadastrese"> <br/>Cadastre-se</a>
+                <a class="botoes_navegacao"  style="z-index: 1; background: #FFFFFF; margin-left: -1px; border: 1px solid #C0C0C0; width: 100%; vertical-align: middle; border-top-right-radius: 20px; display: flex; justify-content: center; vertical-align:middle" onclick="exibir();" id="soucadastrado"> <br/>Sou Cadastrado</a>                         
+          </div>
+
+          <div class=""  style="background: #EEE; width: 100%; margin-bottom: 20px; height: auto; margin-top: -1px; border: 1px solid #C0C0C0;" >
+  
+          <div class="" style="margin-left: 25px; font-size: x-large; margin-top: 25px;">
+
+          <h3 style="margin-bottom: 30px;">  Preencha os dados abaixo para finalizar o seu orçamento. Bons Negócios!</h3>
+
+          <div id='alertMsg' class="alert" style="width: 1230px; display: none;">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+            <strong>Erro!</strong><br/><imput id="imputMsg">teste</imput></span>
+           </div>
+
+         <div  id="divCadastraSe" >
+         <div style="font-size: 18px; margin-right: 25px;" class="" id="nav-vis" role="tabpanel" aria-labelledby="nav-vis-tab">
+  
+                  <div class="row">
+                      <div class="col-12">
+                          <div class="form-group mb-1 has-tipopes has-feedback">         
+                          <small class="help-block" data-fv-validator="notEmpty" data-fv-for="optTipoPes" data-fv-result="NOT_VALIDATED" style="display: none;">Campo obrigatório!</small></div>
+                      </div>
+
+                      <div class="col-2">
+                        <div id='txtCnpjVis_borda' class="form-group mb-1 has-feedback">
+                            <label class="textRegular control-label" for="txtCnpjVis">CNPJ *</label>
+                            <input type="text" class="form-control" id="txtCnpjVis" name="txtCnpjVis" maxlength="150" value="" data-fv-field="txtCnpjVis"><i id='txtCnpjVis_icone' class="form-control-feedback" data-fv-icon-for="txtCnpjVis" style="display: none;"></i>
+                            <div id='txtCnpjVis_msg'>
+                            <small class="help-block" data-fv-validator="callback" data-fv-for="txtCnpjVis" data-fv-result="NOT_VALIDATED" style="display: none;">Este campo é obrigatório para Pessoa Jurídica!</small><small class="help-block" data-fv-validator="stringLength" data-fv-for="txtCnpjVis" data-fv-result="NOT_VALIDATED" style="display: none;">Please enter a value with valid length</small></div>
+                          </div>
+                       </div>
+
+                      <div class="col-4">
+                        <div id='txtEmailVis_borda' class="form-group mb-1 has-feedback">
+                            <label class="textRegular control-label" for="txtEmailVis">E-mail *</label>
+                            <input type="email" class="form-control" id="txtEmailVis" name="txtEmailVis" maxlength="300" value="" data-fv-field="txtEmailVis"><i  id='txtEmailVis_icone' class="form-control-feedback" data-fv-icon-for="txtEmailVis" style=""></i>                       
+                            <div id='txtEmailVis_msg'>
+                            <small class="help-block" data-fv-validator="notEmpty" data-fv-for="txtEmailVis" data-fv-result="VALID" style="display: none;">Campo obrigatório!</small><small class="help-block" data-fv-validator="emailAddress" data-fv-for="txtEmailVis" data-fv-result="INVALID">Endereço de e-mail inválido!</small><small class="help-none  " data-fv-validator="stringLength" data-fv-for="txtEmailVis" data-fv-result="VALID" style="display: none;">Please enter less than 300 characters</small></div>
+                          </div>
+                      </div>
+
+                       <div class="col-6">
+                        <div id='txtNomeVis_borda' class="form-group mb-1 has-feedback">
+                            <label class="textRegular control-label" for="txtNomeVis">Nome Completo *</label>
+                            <input type="text" class="form-control" id="txtNomeVis" name="txtNomeVis" maxlength="150" value="" data-fv-field="txtNomeVis"><i id='txtNomeVis_icone' class="form-control-feedback" data-fv-icon-for="txtNomeVis"></i>
+                            <div id='txtNomeVis_msg'>
+                            <small class="help-block" data-fv-validator="notEmpty" data-fv-for="txtNomeVis" data-fv-result="VALID" style="display: none;">Campo obrigatório!</small><small class="help-block" data-fv-validator="stringLength" data-fv-for="txtNomeVis" data-fv-result="VALID" style="display: none;">Please enter less than 150 characters</small></div>
+                          </div>
+                       </div>
+
+                           <div class="col-5">
+                              <div id='txtEmpresaVis_borda' class="form-group mb-1 has-feedback">
+                                  <label class="textRegular control-label" for="txtEmpresaVis">Nome da Empresa *</label>
+                                  <input type="text" class="form-control" id="txtEmpresaVis" name="txtEmpresaVis" maxlength="150" value="" data-fv-field="txtEmpresaVis"><i id='txtEmpresaVisicone' class="form-control-feedback" data-fv-icon-for="txtEmpresaVis"></i>
+                                  <div id='txtEmpresaVis_msg'>
+                                  <small class="help-block" data-fv-validator="callback" data-fv-for="txtEmpresaVis" data-fv-result="NOT_VALIDATED" style="display: block;">Este campo é obrigatório para Pessoa Jurídica!</small><small class="help-block" data-fv-validator="stringLength" data-fv-for="txtEmpresaVis" data-fv-result="NOT_VALIDATED" style="display: none;">Please enter a value with valid length</small>
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="col-3">
+                            <div id='txtSenhaVis_borda' class="form-group mb-1 has-feedback">
+                                <label class="textRegular control-label" for="txtSenhaVis">Senha *</label>
+                                <input type="password" class="form-control" id="txtSenhaVis" name="txtSenhaVis" maxlength="160"  value="" data-fv-field="txtSenhaVis"><i  id='txtSenhaVisicone' class="form-control-feedback" data-fv-icon-for="txtTelefoneVis" style="display: none;"></i>
+                                <div id='txtSenhaVis_msg'>
+                                <small class="help-block" data-fv-validator="notEmpty" data-fv-for="txtTelefoneVis" data-fv-result="NOT_VALIDATED" >Campo obrigatório!</small><small class="help-block" data-fv-validator="stringLength" data-fv-for="txtTelefoneVis" data-fv-result="NOT_VALIDATED" style="display: none;">Telefone inválido!</small></div>
+                                </div>              
+                              </div>
+          
+                      <div class="col-2">
+                          <div id='txtTelefoneVis_borda' class="form-group mb-1 has-feedback">
+                              <label class="textRegular control-label" for="txtTelefoneVis">Telefone *</label>
+                              <input type="tel" class="form-control" id="txtTelefoneVis" name="txtTelefoneVis" maxlength="16" placeholder="(00) 0000-0000" value="" data-fv-field="txtTelefoneVis"><i  id='txtTelefoneVisicone' class="form-control-feedback" data-fv-icon-for="txtTelefoneVis" style="display: none;"></i>
+                              <div id='txtTelefoneVis_msg'>
+                              <small class="help-block" data-fv-validator="notEmpty" data-fv-for="txtTelefoneVis" data-fv-result="NOT_VALIDATED" style="display: none;">Campo obrigatório!</small><small class="help-block" data-fv-validator="stringLength" data-fv-for="txtTelefoneVis" data-fv-result="NOT_VALIDATED" style="display: none;">Telefone inválido!</small></div>
+                              </div>              
+                            </div>
+                  
+                      <div class="col-2">
+                          <div class="form-group mb-1 has-feedback">
+                              <label class="textRegular control-label" for="txtCelularVis">Celular</label>
+                              <input type="tel" class="form-control" id="txtCelularVis" name="txtCelularVis" maxlength="16" placeholder="(00) 00000-0000" value="" data-fv-field="txtCelularVis"><i id='txtCelularVisicone' class="form-control-feedback" data-fv-icon-for="txtCelularVis" style="display: none;"></i>
+                          <small class="help-block" data-fv-validator="regexp" data-fv-for="txtCelularVis" data-fv-result="NOT_VALIDATED" style="display: none;">Favor informar somente os números</small><small class="help-block" data-fv-validator="stringLength" data-fv-for="txtCelularVis" data-fv-result="NOT_VALIDATED" style="display: none;">Celular inválido!</small></div>
+                      </div>
+
+                      <div class="col-2">
+                          <div id='txtCepVis_borda' class="form-group mb-1 has-feedback">
+                              <label class="textRegular control-label" for="txtCepVis">CEP*</label>
+                              <input type="text" class="form-control input-number" id="txtCepVis" name="txtCepVis" maxlength="9" placeholder="00000-000" value="" data-fv-field="txtCepVis"> <i id='txtCepVisicone' class="form-control-feedback" data-fv-icon-for="txtCepVis" style="display: none;"></i>
+                              <div id='txtCepVis_msg'>
+                              <small class="help-block" data-fv-validator="notEmpty" data-fv-for="txtCepVis" data-fv-result="NOT_VALIDATED" style="display: none;">Campo obrigatório!</small><small class="help-block" data-fv-validator="stringLength" data-fv-for="txtCepVis" data-fv-result="NOT_VALIDATED" style="display: none;"> </small><small class="help-block" data-fv-validator="zipCode" data-fv-for="txtCepVis" data-fv-result="NOT_VALIDATED" style="display: none;">CEP Inválido!</small></div>
+                             </div>
+                    </div>
+
+                    <div class="col-3">
+                      <div id='txtEnderecoVis_borda'  class="form-group mb-1 has-feedback">
+                          <label class="textRegular control-label" for="txtCidadeVis">Endereço *</label>
+                          <input type="text" class="form-control" id="txtEnderecoVis" name="txtEnderecoVis" maxlength="300" value="" data-fv-field="txtEnderecoVis"><i  id='txtEnderecoVisicone' class="form-control-feedback" data-fv-icon-for="txtEndereco" style="display: none;"></i>
+                          <div id='txtEndereco_msg'>
+                          <small class="help-block" data-fv-validator="notEmpty" data-fv-for="txtCidadeVis" data-fv-result="NOT_VALIDATED" style="display: none;">Campo obrigatório!</small><small class="help-block" data-fv-validator="stringLength" data-fv-for="txtCidadeVis" data-fv-result="NOT_VALIDATED" style="display: none;">Nome da endereço inválido!</small></div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                      <div id='txtBairroVis_borda'  class="form-group mb-1 has-feedback">
+                          <label class="textRegular control-label" for="txtCidadeVis">Bairro *</label>
+                          <input type="text" class="form-control" id="txtBairroVis" name="txtBairroVis" maxlength="300" value="" data-fv-field="txtBairroVis"><i  id='txtBairroVisicone' class="form-control-feedback" data-fv-icon-for="txtBairroVis" style="display: none;"></i>
+                          <div id='txtBairroVis_msg'>
+                          <small class="help-block" data-fv-validator="notEmpty" data-fv-for="txtBairroVis" data-fv-result="NOT_VALIDATED" style="display: none;">Campo obrigatório!</small><small class="help-block" data-fv-validator="stringLength" data-fv-for="txtBairroVis" data-fv-result="NOT_VALIDATED" style="display: none;">Nome da bairro inválido!</small></div>
+                        </div>
+                    </div>
+
+                      <div class="col-2">
+                          <div id='txtCidadeVis_borda'  class="form-group mb-1 has-feedback">
+                              <label class="textRegular control-label" for="txtCidadeVis">Cidade *</label>
+                              <input type="text" class="form-control" id="txtCidadeVis" name="txtCidadeVis" maxlength="300" value="" data-fv-field="txtCidadeVis"><i  id='txtCidadeVisicone' class="form-control-feedback" data-fv-icon-for="txtCidadeVis" style="display: none;"></i>
+                              <div id='txtCidadeVis_msg'>
+                              <small class="help-block" data-fv-validator="notEmpty" data-fv-for="txtCidadeVis" data-fv-result="NOT_VALIDATED" style="display: none;">Campo obrigatório!</small><small class="help-block" data-fv-validator="stringLength" data-fv-for="txtCidadeVis" data-fv-result="NOT_VALIDATED" style="display: none;">Nome da cidade inválido!</small></div>
+                            </div>
+                        </div>
+
+                      <div class="col-2">
+                          <div  id='cboEstadoVis_borda' class="form-group mb-1 has-feedback">
+                              <label class="textRegular control-label" for="cboEstadoVis">Estado *</label>
+                              <select class="form-control" id="cboEstadoVis" name="cboEstadoVis" data-fv-field="cboEstadoVis">
+                                  <option value=""></option>
+                                  <option value="AC">Acre</option>
+                                  <option value="AL">Alagoas</option>
+                                  <option value="AP">Amapá</option>
+                                  <option value="AM">Amazonas</option>
+                                  <option value="BA">Bahia</option>
+                                  <option value="CE">Ceará</option>
+                                  <option value="DF">Distrito Federal</option>
+                                  <option value="ES">Espírito Santo</option>
+                                  <option value="GO">Goiás</option>
+                                  <option value="MA">Maranhão</option>
+                                  <option value="MT">Mato Grosso</option>
+                                  <option value="MS">Mato Grosso do Sul</option>
+                                  <option value="MG">Minas Gerais</option>
+                                  <option value="PA">Pará</option>
+                                  <option value="PB">Paraíba</option>
+                                  <option value="PR">Paraná</option>
+                                  <option value="PE">Pernambuco</option>
+                                  <option value="PI">Piauí</option>
+                                  <option value="RJ">Rio de Janeiro</option>
+                                  <option value="RN">Rio Grande do Norte</option>
+                                  <option value="RS">Rio Grande do Sul</option>
+                                  <option value="RO">Rondônia</option>
+                                  <option value="RR">Rorâima</option>
+                                  <option value="SC">Santa Catarina</option>
+                                  <option value="SP">São Paulo</option>
+                                  <option value="SE">Sergipe</option>
+                                  <option value="TO">Tocantins</option>
+                              </select><i id='cboEstadoVisicone' class="form-control-feedback" data-fv-icon-for="cboEstadoVis" style="display: none;"></i>
+                              <div id='cboEstadoVis_msg'>
+                              <small class="help-block" data-fv-validator="notEmpty" data-fv-for="cboEstadoVis" data-fv-result="NOT_VALIDATED" style="display: none;">Campo obrigatório!</small></div>
+                            </div>
+                            </div>
+
+                      <div class="col-6">
+
+                          <div class="form-group mb-1 mt-2 has-feedback">
+                              <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input" id="chkAceitoTermo" name="chkAceitoTermo" checked="checked" value="1" data-fv-field="chkAceitoTermo"><i class="form-control-feedback" data-fv-icon-for="chkAceitoTermo" style="display: none;"></i>
+                                  <label class="custom-control-label textxSmall control-label" for="chkAceitoTermo">Aceito o termo de uso do site.</label>
+                              </div>
+                          <small class="help-block" data-fv-validator="notEmpty" data-fv-for="chkAceitoTermo" data-fv-result="NOT_VALIDATED" style="display: none;">Campo obrigatório!</small></div>
+                      </div>
+                      <div class="col-6">
+                          <div class="form-group mb-1 mt-2 text-right">
+                        
+                              <button id='btn_finalizar_orcamento' type="submit" class="btn btn-primary" title="Orçar mais Produtos"><span style="font-family: FontAwesome; font-size: 22px;">&#xf003; </span>Receber Orçamentos</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+
+      <div id="divSouCadastrado" >
+              <div style="font-size: 18px; margin-right: 25px;"  class="row">
+                <div class="col-5">
+                  <div id='txtEmailCad_borda' class="form-group mb-1 has-feedback">
+                      <label class="textRegular control-label" for="txtEmailCad">E-mail *</label>
+                      <input type="email" class="form-control" id="txtEmailCad" name="txtEmailVis" maxlength="300" value="" data-fv-field="txtEmailVis"><i  id='txtEmailCad_icone' class="form-control-feedback" data-fv-icon-for="txtEmailVis" style=""></i>
+                      <div id='txtEmailCad_msg'>
+                      <small class="help-block" data-fv-validator="notEmpty" data-fv-for="txtEmailVis" data-fv-result="VALID" style="display: none;">Campo obrigatório!</small><small class="help-block" data-fv-validator="emailAddress" data-fv-for="txtEmailVis" data-fv-result="INVALID">Endereço de e-mail inválido!</small><small class="help-none  " data-fv-validator="stringLength" data-fv-for="txtEmailVis" data-fv-result="VALID" style="display: none;">Please enter less than 300 characters</small></div>
+                    </div>
+                </div>
+
+                <div class="col-2">
+                  <div id='txtSenhaCad_borda' class="form-group mb-1 has-feedback">
+                      <label class="textRegular control-label" for="txtSenhaCad">Senha *</label>
+                      <input type="password" class="form-control" id="txtSenhaCad" name="txtSenhaVis" maxlength="160"  value="" data-fv-field="txtSenhaVis"><i  id='txtSenhaCadVisicone' class="form-control-feedback" data-fv-icon-for="txtTelefoneVis" style="display: none;"></i>
+                      <div id='txtSenhaCad_msg'>
+                      <small class="help-block" data-fv-validator="notEmpty" data-fv-for="txtTelefoneVis" data-fv-result="NOT_VALIDATED" >Campo obrigatório!</small><small class="help-block" data-fv-validator="stringLength" data-fv-for="txtTelefoneVis" data-fv-result="NOT_VALIDATED" style="display: none;">Telefone inválido!</small></div>
+                      </div>                   
+                      <a class="textSmall text-dark" title="Esqueci minha senha" href="/categorias">Esqueci minha senha</a>
+                    </div>
+
+                <div class="col-5">
+                    <div class="form-group text-right">
+                        <div class="mb-4 d-none d-lg-block"></div>
+
+                        <button id='btn_login' type="submit" class="btn btn-primary" title="Orçar mais Produtos"><span style="font-family: FontAwesome; font-size: 22px;">&#xf003; </span>Finalizar Orçamento</button>
+                    </div>
+                </div>
+
+            </div>
+
+          </div>
+       
+        </div>
+
+      </div>
+
+     </div>
+
+     </div>
+   </div>
+   </div>
+
+   </div>
+    <!-- SCRIPT DO SITE -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/script/meuorcamento/meuorcamento.service.js"></script>
+    <script src="/script/meuorcamento/meuOrcamentoTableRow.component.js"></script>
+    <script src="/script/meuorcamento/app.js"></script>
+    <!-- FIM - SCRIPT DO SITE -->
+
     <!-- FOOTER DO SITE -->
     <%- include('partials/footer')%>
     <!-- FIM - FOOTER DO SITE -->
@@ -20,6 +302,7 @@
     <!-- END DO SITE -->
     <%- include('partials/end')%>
     <!-- FIM - END DO SITE -->
-  </body>
+
+</body>
 
 </html>

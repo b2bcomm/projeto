@@ -1,0 +1,135 @@
+@import url("/stylesheets/base.css");
+/* @import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css');  */
+
+/**********************CARDE LOGIN *******************/
+.testimonial {
+  padding-top: 100px;
+}
+.testimonial .col-3 {
+  text-align: center;
+  padding: 40px 20px;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: transform 0.5;
+}
+
+.testimonial .col-3 img {
+  width: 50px;
+  margin-top: 20px;
+  border-radius: 50%;
+}
+
+.testimonial .col-3:hover {
+  transform: translateY(-10px);
+}
+
+.fa.fa-quote-left {
+  font-size: 34px;
+  color: #ff523b;
+}
+.col-3 p {
+  font-size: 12px;
+  margin: 12px 0;
+  color: #777;
+}
+
+.testimonial .col-3 h3 {
+  font-weight: 600;
+  color: #555;
+  font-size: 16px;
+}
+
+.botoes_navegacao {
+  background: #f4f4f4;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid #eee;
+  color: #808080;
+}
+
+.botoes_navegacao:hover {
+  color: #34495e;
+  background: #eee;
+}
+
+.bloc-title-signin-signup-active {
+  background: #fff;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid #fff;
+}
+
+/*********************CAIXA IMPUT *******************/
+
+.borda_imput {
+  border-bottom-style: solid;
+  border-bottom-width: thin;
+  font-family: FontAwesome;
+  width: 450px;
+}
+/* .borda_imput:focus{
+    border-bottom-style: none; 
+    border-bottom-width: none;
+
+    background-color: lightblue;
+  }
+ */
+
+.botao_confirmacao {
+  color: #fff;
+  background-color: rgba(71, 133, 195, 1);
+  background-color: royalblue;
+  height: 55px;
+
+  padding: 10px 16px;
+  font-size: 20px;
+  line-height: 1.3333333;
+  border-radius: 2px;
+  width: 450px;
+
+  cursor: pointer;
+}
+
+.botao_confirmacao:hover {
+  color: #fff;
+  background-color: rgb(47, 96, 145);
+  border-color: rgb(44, 62, 80);
+  height: 55px;
+}
+
+.alert {
+  width: 450px;
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+.conteudo {
+  width: 1290px;
+  height: auto;
+  background: transparent;
+  position: relative;
+  margin: 5px auto 0 auto;
+}
+.texto_dos_menu {
+  font-size: large;
+  text-decoration: none;
+}
+.texto_dos_menu:hover {
+  color: rgba(0, 0, 0, 0.5);
+}

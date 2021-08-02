@@ -3,18 +3,18 @@ const { sequelize } = require('../common/database')
 
 // modelo da tabela do banco de dados
 const TodoModel = sequelize.define(
-  'anunciantes',
+  'participantes',
   {
   
   
-    id_anunciante: {
+    id_participantes: {
       type: Sequelize.INTEGER,
       primaryKey: true,
       autoIncrement: true
     },
 
-    cm_nome_empresa: Sequelize.STRING,
-    cm_cnpj: Sequelize.STRING
+    cm_email: Sequelize.STRING,
+    cm_senha: Sequelize.STRING
 
 
   },
