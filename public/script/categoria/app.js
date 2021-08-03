@@ -1,9 +1,21 @@
 let users = [];
 
 function mountHTML(produto) {
+
+  
+           
   const rows = produto.map(UserTableRow.render).join("");
   const tBody = document.querySelector("tbody");
   tBody.innerHTML = rows;
+
+
+
+  console.log('chegouuu aui',rows )
+
+
+
+
+
 }
 
 function hideRowsNotMatched(term) {
@@ -160,6 +172,7 @@ async function renderScreen(IDFILTRO) {
     mountHTML(users);
   } else {
     users = await UsersService.getID(IDFILTRO);
+    
     mountHTML(users);
   }
   document.querySelector("div#modal").style.display = "none";

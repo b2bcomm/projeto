@@ -62,6 +62,22 @@ const controlador = {
     });
   },
 
+
+  quem_somos: async (req, res) =>{
+    res.render("quem_somos")
+  },
+
+  faq: async (req, res) =>{
+    res.render("faq")
+  },
+
+
+  fale_conosco: async (req, res) =>{
+    res.render("fale_conosco")
+  },
+
+  
+
   indexorcamento: async (req, res) => {
     const { todoId } = req.params;
     const contador_mais_procurador = await service.CONTADOR_MAIS_PROCURADO(todoId);

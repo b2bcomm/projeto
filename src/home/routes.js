@@ -12,4 +12,7 @@ router.get("/categorias/:id", IndexHome.categorias);
 router.post("/meusorcamento", IndexHome.meusorcamentos);
 router.get("/meusorcamento/:codigo",IndexHome.remover_o_produto_meusorcamentos);
 router.get("/meusorcamento", IndexHome.Getmeusorcamentos);
+router.get("/quem_somos", IndexHome.quem_somos);
+router.get("/faq", IndexHome.faq);
+router.get("/fale_conosco", IndexHome.fale_conosco);
 module.exports = router;

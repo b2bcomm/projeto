@@ -97,7 +97,7 @@ const transporter = nodemailer.createTransport({
     to: email_comprador,
     subject: "Orçamento Portal B2B - " + nomedaempresa,
     html: `<div>
-                <table  style="border-style: solid; border-width: inherit; border-color: #000000; width: 100%; ">
+                <table  style="border-style: solid; border-width: thin; border-color: #000000; width: 100%; ">
                     <tr>
                         <td  style="width: 409px; text-align: center;">
                             <img style="width: 200px; height: 100px;" src="${foto_anunciante}" /></td>
@@ -111,7 +111,7 @@ const transporter = nodemailer.createTransport({
                     </tr>
                     </table>
                     <br/>
-                    <table  style="border-style: solid; border-width: inherit; border-color: #000000; width: 100%; ">
+                    <table  style="border-style: solid; border-width: thin; border-color: #000000; width: 100%; ">
                     <tr>
                     <td style="border-width: thin; border-color: #000000; border-style: none solid none none; text-align: center;" >
                     <h2>Orçamento nº: <strong>${numero_orcamento}</strong></h2> 
@@ -126,7 +126,7 @@ const transporter = nodemailer.createTransport({
                 </table>
                 
                 <br/>
-               <table style="border-style: solid; border-width: inherit; border-color: #000000; width: 100%; text-align: center;">
+               <table style="border-style: solid; border-width: thin; border-color: #000000; width: 100%; text-align: center;">
                <tr>
                            <td style="text-align: center;" >
                            <h1><strong>CLIENTE</strong></h1> 
@@ -164,7 +164,7 @@ const transporter = nodemailer.createTransport({
             
               <br/>
 
-              <table style="border-style: solid; border-width: inherit; border-color: #000000; width: 100%; text-align: center;">
+              <table style="border-style: solid; border-width: thin; border-color: #000000; width: 100%; text-align: center;">
 <tr>
             <td style="text-align: center;" >
             <h1>ORÇAMENTO</h1> 
@@ -200,7 +200,7 @@ const transporter = nodemailer.createTransport({
               
 <br/>
 
-<table style="border-style: solid; border-width: inherit; border-color: #000000; width: 100%;">
+<table style="border-style: solid; border-width: thin; border-color: #000000; width: 100%;">
 <tr>
 
 
@@ -229,7 +229,7 @@ const transporter = nodemailer.createTransport({
 <br/>
 
 
-<table style="border-style: solid; border-width: inherit; border-color: #000000; width: 100%; text-align: center;">
+<table style="border-style: solid; border-width: thin; border-color: #000000; width: 100%; text-align: center;">
 <tr>
             <td style="text-align: center;" >
             <h1>OBSERVAÇÕES</h1> 

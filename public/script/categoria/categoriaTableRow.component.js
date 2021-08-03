@@ -4,6 +4,9 @@ class UserTableRow {
   }
 
   static render(user) {
+
+    
+
     return `<tr class="col-md-3" data-user='${JSON.stringify(user)}'> \
      <td>  
      <div style="border-radius: 10px; border-color: #F0EDED; background-color: #F0EDED; border-width: 0px; margin: 20px; " >            

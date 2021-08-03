@@ -1,18 +1,44 @@
 <!DOCTYPE html>
 <html>
-      <!-- HEAD DO SITE -->
-      <%- include('partials/head') %>
-      <!-- FIM - HEAD DO SITE -->
+  <head>
+    <!-- HEAD DO SITE -->
+    <%- include('partials/head') %>
+    <!-- FIM - HEAD DO SITE -->
+
+    <!-- CSS  DO SITE -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem somos nós</title>
+
+    <link rel="stylesheet" href="/stylesheets/login.css" />
+    <link rel="stylesheet" href="/stylesheets/styleQuemSomos.css" />
+    <!-- FIM - CSS  DO SITE -->
+
+  </head>
   <body>
     <!-- HEADER DO SITE -->
     <%- include('partials/header') %>
     <!-- FIM - HEADER DO SITE -->
 
-    <!-- <h1><%= title %></h1> -->
-    <h1>Quem Somos</h1> 
-
-    <p>Somos uma prataforma que uni o comprador com grandes fornecedores, empresas dispostas a vender a preço de atacado.<%= title %></p>
-   
+    <div class="conteudo" style="height: 700px;">
+      <div class="container" style="height: 500px;">
+        <center>
+            <h1><b>Quem somos nós</b></h1>
+            <div class="img" style="text-align: center; ">
+              <img class="imagem_logo" style="height: 50px; width: 100px; margin-top: 25px;"  src="/images/logo-azulescuro.png" alt="">
+            </div>
+            <p>
+                A B2B é uma empresa que busca cada vez mais estar presente na mente,                
+                no coração e nas lojas de cada empresário  do Brasil que pensa em expandir os seus negócios no ramo de materiais escolares. <br>
+                Os produtos cadastrados em nossa plataforma são publicados para gerarem orçamentos para os clientes, buscando um melhor aproveitamento na compra e venda de produtos.
+                 E por ser uma empresa que tanto cresce, toda a reputação e benefícios conquistados são repassado para os nossos anunciantes. O que aumenta as suas chances de venda. 
+                Procuramos ter a solução ideal para alavancar as suas vendas ou a melhor compra para o seu negócio. <br>
+                 Por isso, não deixe de aproveitar as nossas ferramentas que vão otimizar toda a cadeia de vendas. Tornando suas operações mais ágil e lucrativa. 
+                </p>
+        </center>
+    </div>
+    </div>
     <!-- FOOTER DO SITE -->
     <%- include('partials/footer')%>
     <!-- FIM - FOOTER DO SITE -->
@@ -21,5 +47,4 @@
     <%- include('partials/end')%>
     <!-- FIM - END DO SITE -->
   </body>
-
 </html>

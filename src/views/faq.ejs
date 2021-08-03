@@ -1,18 +1,121 @@
 <!DOCTYPE html>
 <html>
-      <!-- HEAD DO SITE -->
-      <%- include('partials/head') %>
-      <!-- FIM - HEAD DO SITE -->
+  <head>
+    <!-- HEAD DO SITE -->
+    <%- include('partials/head') %>
+    <!-- FIM - HEAD DO SITE -->
+
+    <!-- CSS  DO SITE -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - B2B</title>
+    <!--   Icones  -->
+    <script src="https://unpkg.com/ionicons@5.5.1/dist/ionicons.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="/stylesheets/login.css" />
+    <link rel="stylesheet" href="/stylesheets/stylesFaq.css" />
+    <!-- FIM - CSS  DO SITE -->
+
+  </head>
   <body>
     <!-- HEADER DO SITE -->
     <%- include('partials/header') %>
     <!-- FIM - HEADER DO SITE -->
 
-    <!-- <h1><%= title %></h1> -->
-    <h1>FAQ</h1> 
-
-    <p>FAQ é um acrónimo da expressão inglesa Frequently Asked Questions Em português seria algo como "Perguntas frequentes". Um FAQ, quando usado num contexto pluralista, significa uma compilação de perguntas frequentes acerca de determinado tema; quando usado num contexto singular, será uma dessas perguntas frequentes. </p>
-   
+    <div>
+      <section>
+        <div class="container">
+            <div class="accordin">
+                <!-- -------    // ----------   -->
+                <!--Primeira pergunta e Resposta-->
+  <div class="accordion-item" id = "question1">
+      <a class="accordion-link" href="#question1">
+       <b>1 - Vale a pena vender ou anunciar no B2B?</b>
+     
+    <!-- Tentar colocar icones aqui:   -->
+    <i class="icon ion-md-add"></i>
+    <i class="icon ion-md-remove"></i>
+      </a>
+       <!--Resposta-->
+  <div class="answer">
+      <p> O B2B é uma plataforma virtual onde você pode aumentar as suas vendas.
+           E por sermos a principal empresa no segmento de material escolar é uma exelente oportunidade de negócio para lojistas e empresários de todos os tamanhos. Onde poderá usurfruir das nossas estratégicas de mercado e com a melhor expêriencia de compra do varejo.
+           Captando cada vez mais bons clientes.</p>
+  </div>   
+  </div>
+  <!--   ------  //  -------  -->
+               <!--Segunda pergunta e Resposta-->
+               <div class="accordion-item" id = "question2">
+                  <a class="accordion-link" href="#question2">
+                   <b> 2 - Quais são as principais objeções do cliente no B2B?</b>
+                   <i></i>
+                <!-- Tentar colocar icones aqui:   -->
+                <i class="icon ion-md-add"></i>
+                <i class="icon ion-md-remove"></i>
+                  </a>
+                   <!--Resposta-->
+              <div class="answer">
+                  <p> Não confiar na sua loja virtual. O frete está muito caro. Produto "caro demais".
+                       Insatisfeito com forma de pagamento. Frete demorado. Não acreditar na promessa do produto. </p>
+              </div>   
+              </div>
+              <!-- -----    //    --------->
+                           <!--Terceira pergunta e Resposta-->
+  <div class="accordion-item" id = "question3">
+      <a class="accordion-link" href="#question3">
+      <b> 3 - Quais são as reais vantagens de vender no B2B?</b>
+  
+       <i></i>
+    <!-- Tentar colocar icones aqui:   -->
+    <i class="icon ion-md-add"></i>
+    <i class="icon ion-md-remove"></i>
+      </a>
+       <!--Resposta-->
+  <div class="answer">
+      <p> 3- <b>Qualquer pessoa pode vender na B2B.</b> Tenha um CNPJ e poderá formalizar o seu negócio.<br>
+      
+          <b> Facilidade de cadastro e vendas.</b> Em poucos cliques, você consegue cadastrar os produtos e começar a vender no B2B.<br>
+          <b> Comissão baixa.</b> <br>Tendo um parcelamento sem juros, torna a oferta irresistível aos olhos do cliente.<br>
+          <b> As campanhas de marketing da B2B estão atraindo ainda mais pessoas para dentro do site.</b>
+           Quanto mais pessoas no site, mais chances de você vender!<br>
+           <b> A B2B montou um time especializado para dar suporte aos vendedores.</b> 
+           Isso traz proximidade entre o canal e os vendedores.  </p>
+  </div>   
+  </div>
+  <!-- ------------ // ----------->
+               <!--Quarta pergunta e Resposta-->
+               <div class="accordion-item" id = "question4">
+                  <a class="accordion-link" href="#question4">
+                   <b>4 - Quais são as principais responsabilidade dos anunciantes?</b>
+                   <i></i>
+                <!-- Tentar colocar icones aqui:   -->
+                <i class="icon ion-md-add"></i>
+                <i class="icon ion-md-remove"></i>
+                  </a>
+                   <!--Resposta-->
+              <div class="answer">
+                  <p> 4- <b>Conduta nos Negócios.</b>O anunciante não pode e não está autorizado a vincular contratualmente a B2B ou fazer quaisquer representações em nome da B2B. 
+                      O anunciante não pode se envolver em qualquer conduta inconsciente, falsa, ilícita, enganosa ou fraudulenta. 
+                      <br>
+      
+                      <b> Ações Proibidas: </b> 
+                     <br> (a)     usar emails publicitários para promover a B2B sem o consentimento prévio por escrito da B2B;
+                     <br> (b)     uso fraudulento de serviços de otimização de mecanismos de busca para gerar ou ocultar impressões, consultas, cliques ou conversões que sejam fraudulentas ou inválidas;
+                     <br> (c)      dirigir ou utilizar qualquer palavra-chave SEM e outro tráfego publicitário baseado em palavras-chave usando a marca B2B ou marcas privadas para a Plataforma da B2B (em outras palavras, "B2B" e outras palavras similares que possam ser enganosas como B2B devem ser digitadas como palavras-chave negativas) sem o consentimento prévio por escrito da B2B;
+                       </p>
+              </div>   
+              </div>
+            <!--   --------- // ------------------->
+  
+        </div>
+        </div>
+    </section>  
+    </div>
     <!-- FOOTER DO SITE -->
     <%- include('partials/footer')%>
     <!-- FIM - FOOTER DO SITE -->
@@ -21,5 +124,4 @@
     <%- include('partials/end')%>
     <!-- FIM - END DO SITE -->
   </body>
-
 </html>
